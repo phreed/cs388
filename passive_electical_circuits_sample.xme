@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "mga.dtd">
+
+<project guid="{AAFB5B48-A0AF-48A0-BE5D-C5DDA98A6F02}" cdate="Wed Oct 06 19:17:36 2010" mdate="Wed Oct 06 19:17:36 2010" version="" metaguid="{72DB437C-F39B-4CF3-ACB2-03A0DFCF8CAB}" metaversion="0.1" metaname="passive_electrical_circuit_metamodel">
+	<name>PassiveElectricalCircuits</name>
+	<comment></comment>
+	<author></author>
+	<folder id="id-006a-00000001" relid="0x1" childrelidcntr="0x1" kind="RootFolder" guid="{01439fe3-511f-43b0-970e-fb635cbb8e8b}">
+		<name>PassiveElectricalCircuits</name>
+		<model id="id-0065-00000001" kind="Assembly" guid="{9a780c9c-57ab-4250-ab98-e841de61346f}" relid="0x1" childrelidcntr="0x1">
+			<name>RLC circuits</name>
+			<model id="id-0065-00000002" kind="Assembly" role="Assembly" guid="{be80ca7c-cd96-4528-98d8-8a1f895646a7}" relid="0x1" childrelidcntr="0x3">
+				<name>Series RLC</name>
+				<model id="id-0065-00000003" kind="Capacitor" role="Capacitor" guid="{73c6b67c-b90e-4c7c-afba-82da0fbf6c63}" relid="0x1" childrelidcntr="0x2">
+					<name>Capacitor</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Layout" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>240,126</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="capacitance" status="meta">
+						<value>0</value>
+					</attribute>
+					<model id="id-0065-00000006" kind="Terminal" role="leads" guid="{4786fea7-ee28-4b01-aa36-0b70fe0e0b4e}" relid="0x1" childrelidcntr="0x0">
+						<name>leads</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Layout" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>28,182</value>
+								</regnode>
+							</regnode>
+						</regnode>
+					</model>
+					<model id="id-0065-00000007" kind="Terminal" role="leads" guid="{ded63c81-fab4-4c7b-ac8f-628d674e49a0}" relid="0x2" childrelidcntr="0x0">
+						<name>leads</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Layout" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>448,182</value>
+								</regnode>
+							</regnode>
+						</regnode>
+					</model>
+				</model>
+				<model id="id-0065-00000004" kind="Inductor" role="Inductor" guid="{c12d9a85-89ac-4740-b2eb-f017b502eec8}" relid="0x2" childrelidcntr="0x0">
+					<name>Inductor</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Layout" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>170,228</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="inductance" status="meta">
+						<value>0</value>
+					</attribute>
+				</model>
+				<model id="id-0065-00000005" kind="Resistor" role="Resistor" guid="{6e156587-0d80-4222-92e8-c1471be17391}" relid="0x3" childrelidcntr="0x0">
+					<name>Resistor</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Layout" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>205,346</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="length" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="resistance" status="meta">
+						<value>0</value>
+					</attribute>
+					<attribute kind="temp_1" status="meta">
+						<value>0</value>
+					</attribute>
+					<attribute kind="temp_2" status="meta">
+						<value>0</value>
+					</attribute>
+					<attribute kind="width" status="meta">
+						<value></value>
+					</attribute>
+				</model>
+			</model>
+		</model>
+	</folder>
+</project>

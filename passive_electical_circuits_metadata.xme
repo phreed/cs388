@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{3ED3E776-13FC-46EF-91F6-C9CE8852426C}" cdate="Sat Sep 25 09:07:53 2010" mdate="Sat Sep 25 09:07:53 2010" version="0.1" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
+<project guid="{54BC3FB7-FAED-48F6-A3F2-A40EFDD2C0BC}" cdate="Sat Sep 25 09:07:53 2010" mdate="Sat Sep 25 09:07:53 2010" version="0.1" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
 	<name>passive_electrical_circuit_metamodel</name>
 	<comment>First mini-project for CS-388, Model-Integrated-Computing
 The intended audience for this DSML are operators of the ngspice electronic simulator.</comment>
@@ -1130,7 +1130,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</regnode>
 			</regnode>
 		</regnode>
-		<model id="id-0065-00000001" kind="ParadigmSheet" guid="{2fcc9467-441f-4e01-85c4-45f91e836a55}" relid="0x1" childrelidcntr="0x45">
+		<model id="id-0065-00000001" kind="ParadigmSheet" guid="{2fcc9467-441f-4e01-85c4-45f91e836a55}" relid="0x1" childrelidcntr="0x46">
 			<name>PassiveElement</name>
 			<atom id="id-0066-00000005" kind="Model" role="Model" guid="{a7a03152-9ac1-4690-9c1c-e1014b380003}" relid="0x8">
 				<name>Resistor</name>
@@ -2128,6 +2128,120 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
+			<atom id="id-0066-00000041" kind="Reference" role="Reference" guid="{774b4d0c-c955-4519-8eee-7be040e26993}" relid="0x46">
+				<name>Reference</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>567,525</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>567,525</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>567,525</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>567,525</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>567,525</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InRootFolder" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</atom>
 			<reference id="id-0067-00000003" kind="ModelProxy" role="ModelProxy" guid="{ed6f27e7-c838-413c-940e-ba8304ed09bf}" relid="0x2a" referred="id-0066-00000018">
 				<name>ResistanceDiffusionModelProxy</name>
 				<regnode name="PartRegs" status="undefined">
@@ -2147,7 +2261,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>585,371</value>
+							<value>529,294</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -3461,7 +3575,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>53,63</value>
+							<value>32,84</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -3848,7 +3962,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>50,20</value>
+							<value>8,154</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -4220,7 +4334,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>50,20</value>
+							<value>143,84</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -4817,8 +4931,8 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="src" target="id-0066-00000027"/>
 			</connection>
 		</model>
-		<model id="id-0065-00000006" kind="ParadigmSheet" guid="{a347fbe2-edec-4d99-a47e-ea74e062895a}" relid="0x6" childrelidcntr="0x7">
-			<name>LayoutAspectSheet</name>
+		<model id="id-0065-00000006" kind="ParadigmSheet" guid="{a347fbe2-edec-4d99-a47e-ea74e062895a}" relid="0x6" childrelidcntr="0xc">
+			<name>AspectSheet</name>
 			<reference id="id-0067-0000000f" kind="ConnectionProxy" role="ConnectionProxy" guid="{20c5d66c-dc5b-4445-a986-3a01da2731ff}" relid="0x2" referred="id-0066-00000039">
 				<name>LineProxy</name>
 				<regnode name="PartRegs" status="undefined">
@@ -4838,7 +4952,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>156,350</value>
+							<value>58,350</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -4850,7 +4964,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>142,371</value>
+							<value>79,343</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -4886,7 +5000,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>485,357</value>
+							<value>51,266</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -4898,7 +5012,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>485,357</value>
+							<value>93,266</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -5006,7 +5120,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>492,182</value>
+							<value>51,175</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -5018,7 +5132,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>492,182</value>
+							<value>93,182</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -5107,6 +5221,246 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
+			<reference id="id-0067-00000017" kind="ModelProxy" role="ModelProxy" guid="{a1ccc4a5-1996-4907-9c04-6a526489b24d}" relid="0x9" referred="id-0066-00000037">
+				<name>PhysicsModelListProxy</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,182</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,182</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,182</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,182</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,182</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InRootFolder" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsModelAutoRouted" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeInfoShown" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</reference>
+			<reference id="id-0067-00000018" kind="ModelProxy" role="ModelProxy" guid="{0ecae638-eede-421f-bf2f-cd69d13a8401}" relid="0xa" referred="id-0066-00000018">
+				<name>ResistanceDiffusionModelProxy</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,287</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,287</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,287</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,287</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>415,287</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InRootFolder">
+					<value>true</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsModelAutoRouted" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeInfoShown" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</reference>
 			<connection id="id-0068-0000004c" kind="HasAspect" role="HasAspect" guid="{319ecb68-b223-45e5-b774-51ddd6b5182a}" relid="0x4">
 				<name>HasAspect</name>
 				<connpoint role="dst" target="id-0067-00000010"/>
@@ -5116,6 +5470,16 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<name>HasAspect</name>
 				<connpoint role="dst" target="id-0067-00000014"/>
 				<connpoint role="src" target="id-0069-00000006"/>
+			</connection>
+			<connection id="id-0068-0000006d" kind="HasAspect" role="HasAspect" guid="{94800072-b2bb-450f-bac6-5a17d7010930}" relid="0xb">
+				<name>HasAspect</name>
+				<connpoint role="dst" target="id-0067-00000017"/>
+				<connpoint role="src" target="id-0069-00000007"/>
+			</connection>
+			<connection id="id-0068-0000006e" kind="HasAspect" role="HasAspect" guid="{6cae0cbc-942a-414e-8d5b-bcba8528ebba}" relid="0xc">
+				<name>HasAspect</name>
+				<connpoint role="dst" target="id-0067-00000018"/>
+				<connpoint role="src" target="id-0069-00000007"/>
 			</connection>
 			<set id="id-0069-00000006" kind="Aspect" role="Aspect" guid="{b371d0e6-e1a9-4505-98e0-bf618c93b6b8}" relid="0x1" members="id-0067-0000000f id-0067-00000010 id-0067-00000014">
 				<name>Layout</name>
@@ -5130,7 +5494,28 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>352,175</value>
+							<value>58,98</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+			</set>
+			<set id="id-0069-00000007" kind="Aspect" role="Aspect" guid="{40662680-1957-4e67-8d72-9f959b908284}" relid="0x8" members="id-0067-00000017 id-0067-00000018">
+				<name>Physics</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>303,98</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>457,98</value>
 						</regnode>
 					</regnode>
 				</regnode>
