@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{6F39B408-8FC0-4EAA-B5E6-535253FB54DC}" cdate="Sat Oct 09 10:15:59 2010" mdate="Sat Oct 09 10:15:59 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
+<project guid="{656A90A5-1974-41EB-B0CB-4234746575E1}" cdate="Sat Oct 09 16:06:54 2010" mdate="Sat Oct 09 16:06:54 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
 	<name>passive_electrical_circuit_metamodel</name>
 	<comment>First mini-project for CS-388, Model-Integrated-Computing
 The intended audience for this DSML are operators of the ngspice electronic simulator.</comment>
@@ -979,6 +979,39 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</regnode>
+			<regnode name="DiffusionModelReference-46-Reference" status="undefined">
+				<value></value>
+				<regnode name="KindAspects" status="undefined">
+					<value></value>
+					<regnode name="Resistor:DiffusionModelReference" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value></value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="MetaRef" isopaque="yes">
+					<value>1176</value>
+					<regnode name="Resistor" status="undefined">
+						<value></value>
+						<regnode name="DiffusionModelReference" isopaque="yes">
+							<value>1177</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1178</value>
+							</regnode>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="PrimaryAspects" status="undefined">
+					<value></value>
+					<regnode name="Resistor:DiffusionModelReference" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</regnode>
 			<regnode name="Diode-11-Model" status="undefined">
 				<value></value>
 				<regnode name="KindAspects" status="undefined">
@@ -1304,7 +1337,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</regnode>
 			</regnode>
 		</regnode>
-		<model id="id-0065-00000001" kind="ParadigmSheet" guid="{2fcc9467-441f-4e01-85c4-45f91e836a55}" relid="0x1" childrelidcntr="0x4f">
+		<model id="id-0065-00000001" kind="ParadigmSheet" guid="{2fcc9467-441f-4e01-85c4-45f91e836a55}" relid="0x1" childrelidcntr="0x52">
 			<name>PassiveElement</name>
 			<atom id="id-0066-00000001" kind="Model" role="Model" guid="{a7a03152-9ac1-4690-9c1c-e1014b380003}" relid="0x8">
 				<name>Resistor</name>
@@ -1949,7 +1982,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</attribute>
 			</atom>
 			<atom id="id-0066-00000009" kind="Constraint" role="Constraint" guid="{884d2cc0-26a0-43dd-afcd-5731f26d40d9}" relid="0x20">
-				<name>Constraint</name>
+				<name>ResistanceConstraint</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
@@ -1968,8 +2001,8 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="AddSetEvent" status="meta">
 					<value>false</value>
 				</attribute>
-				<attribute kind="ChangeAttributeEvent" status="meta">
-					<value>false</value>
+				<attribute kind="ChangeAttributeEvent">
+					<value>true</value>
 				</attribute>
 				<attribute kind="ChangePropertyEvent" status="meta">
 					<value>false</value>
@@ -1984,10 +2017,10 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>false</value>
 				</attribute>
 				<attribute kind="ConstraintDescription">
-					<value>resistance can be positive or negative but not zero</value>
+					<value>resistance must be positive </value>
 				</attribute>
 				<attribute kind="ConstraintEqn">
-					<value>self.resistance != 0.0</value>
+					<value>self.resistance &gt; 0.0</value>
 				</attribute>
 				<attribute kind="ConstraintParam" status="meta">
 					<value></value>
@@ -2197,113 +2230,8 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>diffusion length</value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-0000000e" kind="Connector" role="Connector" guid="{cee6b114-e946-4eaa-8b17-37ba416f29eb}" relid="0x2c">
-				<name>Connector</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>620,312</value>
-						</regnode>
-					</regnode>
-					<regnode name="ClassDiagram" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>480,424</value>
-						</regnode>
-					</regnode>
-					<regnode name="Visualization" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>397,555</value>
-						</regnode>
-					</regnode>
-				</regnode>
-			</atom>
-			<atom id="id-0066-0000000f" kind="Connection" role="Connection" guid="{2f659b57-1fbc-453f-b196-abdad3551af9}" relid="0x3b">
-				<name>RModConn</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>571,343</value>
-						</regnode>
-					</regnode>
-					<regnode name="Attributes" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>732,392</value>
-						</regnode>
-					</regnode>
-					<regnode name="ClassDiagram" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>431,455</value>
-						</regnode>
-					</regnode>
-					<regnode name="Constraints" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>508,469</value>
-						</regnode>
-					</regnode>
-					<regnode name="Visualization" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>508,469</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="Color" status="meta">
-					<value>0x000000</value>
-				</attribute>
-				<attribute kind="ConnLineEnd" status="meta">
-					<value>butt</value>
-				</attribute>
-				<attribute kind="ConnLineStart" status="meta">
-					<value>butt</value>
-				</attribute>
-				<attribute kind="ConnLineType" status="meta">
-					<value>solid</value>
-				</attribute>
-				<attribute kind="DisplayedName" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="DstAttrLabel1" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="DstAttrLabel2" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GeneralPreferences" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="InRootFolder" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsAbstract" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsAutoRouted" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="LabelFormatStr" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="NamePosition" status="meta">
-					<value>4</value>
-				</attribute>
-				<attribute kind="SrcAttrLabel1" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="SrcAttrLabel2" status="meta">
-					<value></value>
-				</attribute>
-			</atom>
 			<atom id="id-0066-00000010" kind="Reference" role="Reference" guid="{774b4d0c-c955-4519-8eee-7be040e26993}" relid="0x46">
-				<name>Reference</name>
+				<name>DiffusionModelReference</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
@@ -2321,7 +2249,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>567,525</value>
+							<value>449,392</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -2416,7 +2344,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-0000002b" kind="Inheritance" role="Inheritance" guid="{252f013a-4618-457e-80a1-34e469649b82}" relid="0x48">
+			<atom id="id-0066-00000011" kind="Inheritance" role="Inheritance" guid="{252f013a-4618-457e-80a1-34e469649b82}" relid="0x48">
 				<name>Inheritance</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2452,7 +2380,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-0000002c" kind="Inheritance" role="Inheritance" guid="{c00db246-85b7-4dd2-b411-377149cf5344}" relid="0x4c">
+			<atom id="id-0066-00000012" kind="Inheritance" role="Inheritance" guid="{c00db246-85b7-4dd2-b411-377149cf5344}" relid="0x4c">
 				<name>Inheritance</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2488,7 +2416,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-0000002d" kind="Model" role="Model" guid="{4b391703-db4d-4e78-8529-08167ffed2b8}" relid="0x4d">
+			<atom id="id-0066-00000013" kind="Model" role="Model" guid="{4b391703-db4d-4e78-8529-08167ffed2b8}" relid="0x4d">
 				<name>BFET</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2608,7 +2536,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<reference id="id-0067-00000005" kind="ModelProxy" role="ModelProxy" guid="{ed6f27e7-c838-413c-940e-ba8304ed09bf}" relid="0x2a" referred="id-0066-00000014">
+			<reference id="id-0067-00000005" kind="ModelProxy" role="ModelProxy" guid="{ed6f27e7-c838-413c-940e-ba8304ed09bf}" relid="0x2a" referred="id-0066-00000017">
 				<name>ResistanceDiffusionModelProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2627,13 +2555,13 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>529,294</value>
+							<value>683,364</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>394,560</value>
+							<value>368,539</value>
 						</regnode>
 					</regnode>
 					<regnode name="Visualization" status="undefined">
@@ -2728,7 +2656,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-00000006" kind="ModelProxy" role="ModelProxy" guid="{f7d8bbe8-c853-4d2b-9926-9429f0d01573}" relid="0x43" referred="id-0066-00000024">
+			<reference id="id-0067-00000006" kind="ModelProxy" role="ModelProxy" guid="{f7d8bbe8-c853-4d2b-9926-9429f0d01573}" relid="0x43" referred="id-0066-00000027">
 				<name>TwoTermElementlProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2848,7 +2776,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-0000000e" kind="ModelProxy" role="ModelProxy" guid="{4f32ef0c-2c52-494f-ba8a-534a43743bcf}" relid="0x47" referred="id-0066-00000029">
+			<reference id="id-0067-00000007" kind="ModelProxy" role="ModelProxy" guid="{4f32ef0c-2c52-494f-ba8a-534a43743bcf}" relid="0x47" referred="id-0066-0000002c">
 				<name>BiTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2968,7 +2896,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-0000000f" kind="ModelProxy" role="ModelProxy" guid="{78abfe77-5be4-441c-b4ce-8542c63b5b6c}" relid="0x4b" referred="id-0066-0000002a">
+			<reference id="id-0067-00000008" kind="ModelProxy" role="ModelProxy" guid="{78abfe77-5be4-441c-b4ce-8542c63b5b6c}" relid="0x4b" referred="id-0066-0000002d">
 				<name>TriTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -2993,13 +2921,13 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Constraints" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>436,49</value>
+							<value>444,35</value>
 						</regnode>
 					</regnode>
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>436,49</value>
+							<value>444,35</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -3115,7 +3043,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000003"/>
 				<connpoint role="src" target="id-0066-00000005"/>
 			</connection>
-			<connection id="id-0068-00000005" kind="HasAttribute" role="HasAttribute" guid="{0553f6ad-844e-4224-a0fe-c2824f57045e}" relid="0x1b">
+			<connection id="id-0068-00000004" kind="HasAttribute" role="HasAttribute" guid="{0553f6ad-844e-4224-a0fe-c2824f57045e}" relid="0x1b">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>We</value>
@@ -3123,7 +3051,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-00000006"/>
 			</connection>
-			<connection id="id-0068-00000006" kind="HasAttribute" role="HasAttribute" guid="{a812dfb1-6368-4bb9-8042-1b9bd13e34e2}" relid="0x1e">
+			<connection id="id-0068-00000005" kind="HasAttribute" role="HasAttribute" guid="{a812dfb1-6368-4bb9-8042-1b9bd13e34e2}" relid="0x1e">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>We</value>
@@ -3131,7 +3059,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000002"/>
 				<connpoint role="src" target="id-0066-00000007"/>
 			</connection>
-			<connection id="id-0068-00000007" kind="HasAttribute" role="HasAttribute" guid="{2bb2413f-fab5-4f20-822f-c40a04deb538}" relid="0x1f">
+			<connection id="id-0068-00000006" kind="HasAttribute" role="HasAttribute" guid="{2bb2413f-fab5-4f20-822f-c40a04deb538}" relid="0x1f">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>We</value>
@@ -3139,7 +3067,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000003"/>
 				<connpoint role="src" target="id-0066-00000008"/>
 			</connection>
-			<connection id="id-0068-00000008" kind="HasConstraint" role="HasConstraint" guid="{540e9bb4-1f9d-44b6-aa06-7ab7f722319c}" relid="0x21">
+			<connection id="id-0068-00000007" kind="HasConstraint" role="HasConstraint" guid="{540e9bb4-1f9d-44b6-aa06-7ab7f722319c}" relid="0x21">
 				<name>HasConstraint</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value></value>
@@ -3147,7 +3075,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-00000009"/>
 			</connection>
-			<connection id="id-0068-00000009" kind="HasAttribute" role="HasAttribute" guid="{054bf317-2e56-4e93-bed1-70022a466f7f}" relid="0x24">
+			<connection id="id-0068-00000008" kind="HasAttribute" role="HasAttribute" guid="{054bf317-2e56-4e93-bed1-70022a466f7f}" relid="0x24">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>W</value>
@@ -3155,7 +3083,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-0000000a"/>
 			</connection>
-			<connection id="id-0068-0000000a" kind="HasAttribute" role="HasAttribute" guid="{77c2998e-7a8f-4e96-ae99-2a6555133310}" relid="0x25">
+			<connection id="id-0068-00000009" kind="HasAttribute" role="HasAttribute" guid="{77c2998e-7a8f-4e96-ae99-2a6555133310}" relid="0x25">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>We</value>
@@ -3163,7 +3091,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-0000000b"/>
 			</connection>
-			<connection id="id-0068-0000000b" kind="HasAttribute" role="HasAttribute" guid="{910b7ffd-f393-418b-881c-e9b7911ff040}" relid="0x27">
+			<connection id="id-0068-0000000a" kind="HasAttribute" role="HasAttribute" guid="{910b7ffd-f393-418b-881c-e9b7911ff040}" relid="0x27">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>W</value>
@@ -3171,7 +3099,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-0000000c"/>
 			</connection>
-			<connection id="id-0068-0000000c" kind="HasAttribute" role="HasAttribute" guid="{0e9fa4db-5062-4bd7-b983-b99763c12edd}" relid="0x29">
+			<connection id="id-0068-0000000b" kind="HasAttribute" role="HasAttribute" guid="{0e9fa4db-5062-4bd7-b983-b99763c12edd}" relid="0x29">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>W</value>
@@ -3179,45 +3107,37 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-0000000d"/>
 			</connection>
-			<connection id="id-0068-0000000d" kind="SourceToConnector" role="SourceToConnector" guid="{39d206ad-e3bd-45c7-a44f-5d7a84b3102c}" relid="0x2d">
-				<name>SourceToConnector</name>
-				<attribute kind="Cardinality">
-					<value>0..*</value>
-				</attribute>
-				<attribute kind="srcRolename" status="meta">
-					<value>src</value>
-				</attribute>
-				<connpoint role="src" target="id-0066-00000001"/>
-				<connpoint role="dst" target="id-0066-0000000e"/>
-			</connection>
-			<connection id="id-0068-0000000e" kind="ConnectorToDestination" role="ConnectorToDestination" guid="{ef78f2cc-1ad1-459d-a914-f3fdce97369c}" relid="0x2e">
-				<name>ConnectorToDestination</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>w</value>
-				</regnode>
-				<attribute kind="Cardinality">
-					<value>0..1</value>
-				</attribute>
-				<attribute kind="dstRolename" status="meta">
-					<value>dst</value>
-				</attribute>
-				<connpoint role="src" target="id-0066-0000000e"/>
-				<connpoint role="dst" target="id-0067-00000005"/>
-			</connection>
-			<connection id="id-0068-0000000f" kind="AssociationClass" role="AssociationClass" guid="{357434d8-2253-4d7c-bcbb-8742d6c98c1e}" relid="0x3c">
-				<name>AssociationClass</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>S</value>
-				</regnode>
-				<connpoint role="src" target="id-0066-0000000e"/>
-				<connpoint role="dst" target="id-0066-0000000f"/>
-			</connection>
-			<connection id="id-0068-00000010" kind="BaseInheritance" role="BaseInheritance" guid="{4544d215-f1ac-4a19-ac69-4699f98727dd}" relid="0x44">
+			<connection id="id-0068-0000000f" kind="BaseInheritance" role="BaseInheritance" guid="{4544d215-f1ac-4a19-ac69-4699f98727dd}" relid="0x44">
 				<name>BaseInheritance</name>
 				<connpoint role="dst" target="id-0066-00000005"/>
 				<connpoint role="src" target="id-0067-00000006"/>
 			</connection>
-			<connection id="id-0068-00000011" kind="Containment" role="Containment" guid="{4d55b1fc-ec46-4e35-85d3-8e77091522a4}" relid="0x45">
+			<connection id="id-0068-00000011" kind="BaseInheritance" role="BaseInheritance" guid="{30517619-8460-4dfa-933c-f87824e8ce49}" relid="0x49">
+				<name>BaseInheritance</name>
+				<connpoint role="dst" target="id-0066-00000011"/>
+				<connpoint role="src" target="id-0067-00000007"/>
+			</connection>
+			<connection id="id-0068-00000012" kind="DerivedInheritance" role="DerivedInheritance" guid="{a10a6218-5430-4a5b-aed6-160e9d414156}" relid="0x4a">
+				<name>DerivedInheritance</name>
+				<connpoint role="dst" target="id-0066-00000004"/>
+				<connpoint role="src" target="id-0066-00000011"/>
+			</connection>
+			<connection id="id-0068-00000013" kind="BaseInheritance" role="BaseInheritance" guid="{1bbfc18e-f5b9-419e-8f15-1ab6fcf92ce3}" relid="0x4e">
+				<name>BaseInheritance</name>
+				<connpoint role="dst" target="id-0066-00000012"/>
+				<connpoint role="src" target="id-0067-00000008"/>
+			</connection>
+			<connection id="id-0068-00000014" kind="DerivedInheritance" role="DerivedInheritance" guid="{03877d56-3911-4688-8d6a-f856f144ff9d}" relid="0x4f">
+				<name>DerivedInheritance</name>
+				<connpoint role="src" target="id-0066-00000012"/>
+				<connpoint role="dst" target="id-0066-00000013"/>
+			</connection>
+			<connection id="id-0068-0000003b" kind="ReferTo" role="ReferTo" guid="{f5f44204-330f-4fb6-ae4f-3fabf10f7ef0}" relid="0x51">
+				<name>ReferTo</name>
+				<connpoint role="src" target="id-0066-00000010"/>
+				<connpoint role="dst" target="id-0067-00000005"/>
+			</connection>
+			<connection id="id-0068-0000003c" kind="Containment" role="Containment" guid="{e87c5d4b-4d13-4097-972d-7e55d7aed68c}" relid="0x52">
 				<name>Containment</name>
 				<attribute kind="Cardinality" status="meta">
 					<value>0..*</value>
@@ -3229,32 +3149,12 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 				<connpoint role="dst" target="id-0066-00000001"/>
-				<connpoint role="src" target="id-0066-0000000f"/>
-			</connection>
-			<connection id="id-0068-00000037" kind="BaseInheritance" role="BaseInheritance" guid="{30517619-8460-4dfa-933c-f87824e8ce49}" relid="0x49">
-				<name>BaseInheritance</name>
-				<connpoint role="dst" target="id-0066-0000002b"/>
-				<connpoint role="src" target="id-0067-0000000e"/>
-			</connection>
-			<connection id="id-0068-00000038" kind="DerivedInheritance" role="DerivedInheritance" guid="{a10a6218-5430-4a5b-aed6-160e9d414156}" relid="0x4a">
-				<name>DerivedInheritance</name>
-				<connpoint role="dst" target="id-0066-00000004"/>
-				<connpoint role="src" target="id-0066-0000002b"/>
-			</connection>
-			<connection id="id-0068-00000039" kind="BaseInheritance" role="BaseInheritance" guid="{1bbfc18e-f5b9-419e-8f15-1ab6fcf92ce3}" relid="0x4e">
-				<name>BaseInheritance</name>
-				<connpoint role="dst" target="id-0066-0000002c"/>
-				<connpoint role="src" target="id-0067-0000000f"/>
-			</connection>
-			<connection id="id-0068-0000003a" kind="DerivedInheritance" role="DerivedInheritance" guid="{03877d56-3911-4688-8d6a-f856f144ff9d}" relid="0x4f">
-				<name>DerivedInheritance</name>
-				<connpoint role="src" target="id-0066-0000002c"/>
-				<connpoint role="dst" target="id-0066-0000002d"/>
+				<connpoint role="src" target="id-0066-00000010"/>
 			</connection>
 		</model>
 		<model id="id-0065-00000002" kind="ParadigmSheet" guid="{4f6768cb-23d5-408e-a101-341a8601da5e}" relid="0x2" childrelidcntr="0xf">
 			<name>ActiveElement</name>
-			<atom id="id-0066-00000011" kind="Inheritance" role="Inheritance" guid="{f7543e69-1d3f-4b88-a83f-7a8eb8b61582}" relid="0x3">
+			<atom id="id-0066-00000014" kind="Inheritance" role="Inheritance" guid="{f7543e69-1d3f-4b88-a83f-7a8eb8b61582}" relid="0x3">
 				<name>Inheritance</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3290,7 +3190,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-00000012" kind="Model" role="Model" guid="{20b5c042-07f7-4d33-9f3b-9b9dac4c9a46}" relid="0x4">
+			<atom id="id-0066-00000015" kind="Model" role="Model" guid="{20b5c042-07f7-4d33-9f3b-9b9dac4c9a46}" relid="0x4">
 				<name>VoltageSource</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3410,7 +3310,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000013" kind="Model" role="Model" guid="{ec543e53-0eda-40fb-8cb7-b09159ea2571}" relid="0x5">
+			<atom id="id-0066-00000016" kind="Model" role="Model" guid="{ec543e53-0eda-40fb-8cb7-b09159ea2571}" relid="0x5">
 				<name>CurrentSource</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3530,7 +3430,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<reference id="id-0067-00000007" kind="ModelProxy" role="ModelProxy" guid="{337fa1e9-36ee-4db6-8a98-c658347c37f7}" relid="0xe" referred="id-0066-00000024">
+			<reference id="id-0067-00000009" kind="ModelProxy" role="ModelProxy" guid="{337fa1e9-36ee-4db6-8a98-c658347c37f7}" relid="0xe" referred="id-0066-00000027">
 				<name>ModelProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3650,31 +3550,31 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<connection id="id-0068-00000012" kind="DerivedInheritance" role="DerivedInheritance" guid="{bdf9f5e4-4575-455b-9fe9-d84973b58840}" relid="0x7">
+			<connection id="id-0068-00000015" kind="DerivedInheritance" role="DerivedInheritance" guid="{bdf9f5e4-4575-455b-9fe9-d84973b58840}" relid="0x7">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>Se</value>
 				</regnode>
-				<connpoint role="src" target="id-0066-00000011"/>
-				<connpoint role="dst" target="id-0066-00000012"/>
+				<connpoint role="src" target="id-0066-00000014"/>
+				<connpoint role="dst" target="id-0066-00000015"/>
 			</connection>
-			<connection id="id-0068-00000013" kind="DerivedInheritance" role="DerivedInheritance" guid="{bd1a13df-43da-42b6-801c-aad17d69955b}" relid="0x8">
+			<connection id="id-0068-00000016" kind="DerivedInheritance" role="DerivedInheritance" guid="{bd1a13df-43da-42b6-801c-aad17d69955b}" relid="0x8">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>Se</value>
 				</regnode>
-				<connpoint role="src" target="id-0066-00000011"/>
-				<connpoint role="dst" target="id-0066-00000013"/>
+				<connpoint role="src" target="id-0066-00000014"/>
+				<connpoint role="dst" target="id-0066-00000016"/>
 			</connection>
-			<connection id="id-0068-00000014" kind="BaseInheritance" role="BaseInheritance" guid="{81f7dc8e-e6b0-41ab-9414-a2bb14eeed65}" relid="0xf">
+			<connection id="id-0068-00000017" kind="BaseInheritance" role="BaseInheritance" guid="{81f7dc8e-e6b0-41ab-9414-a2bb14eeed65}" relid="0xf">
 				<name>BaseInheritance</name>
-				<connpoint role="dst" target="id-0066-00000011"/>
-				<connpoint role="src" target="id-0067-00000007"/>
+				<connpoint role="dst" target="id-0066-00000014"/>
+				<connpoint role="src" target="id-0067-00000009"/>
 			</connection>
 		</model>
 		<model id="id-0065-00000003" kind="ParadigmSheet" guid="{f5a0aa61-9e76-4330-b17d-749f8c9e44f6}" relid="0x3" childrelidcntr="0xf">
 			<name>PhysicsModel</name>
-			<atom id="id-0066-00000014" kind="Model" role="Model" guid="{68a1eea1-0d20-4a84-861f-093d93dae6e3}" relid="0x1">
+			<atom id="id-0066-00000017" kind="Model" role="Model" guid="{68a1eea1-0d20-4a84-861f-093d93dae6e3}" relid="0x1">
 				<name>ResistanceDiffusionModel</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3794,7 +3694,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000015" kind="FieldAttribute" role="FieldAttribute" guid="{f45f86b4-559c-40e1-b0c7-480821f1fbe4}" relid="0x2">
+			<atom id="id-0066-00000018" kind="FieldAttribute" role="FieldAttribute" guid="{f45f86b4-559c-40e1-b0c7-480821f1fbe4}" relid="0x2">
 				<name>name</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3836,7 +3736,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000016" kind="FieldAttribute" role="FieldAttribute" guid="{0533143c-7348-4a3f-bdc0-805cd5e469fd}" relid="0x4">
+			<atom id="id-0066-00000019" kind="FieldAttribute" role="FieldAttribute" guid="{0533143c-7348-4a3f-bdc0-805cd5e469fd}" relid="0x4">
 				<name>rsh</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3878,7 +3778,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>sheet resistance</value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000017" kind="FieldAttribute" role="FieldAttribute" guid="{91beee17-34f1-42c1-a055-9dc8a9b1aac5}" relid="0x5">
+			<atom id="id-0066-0000001a" kind="FieldAttribute" role="FieldAttribute" guid="{91beee17-34f1-42c1-a055-9dc8a9b1aac5}" relid="0x5">
 				<name>defw</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3920,7 +3820,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>default width</value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000018" kind="FieldAttribute" role="FieldAttribute" guid="{60ab12e5-bdef-4168-bc16-a1a6a0823430}" relid="0x6">
+			<atom id="id-0066-0000001b" kind="FieldAttribute" role="FieldAttribute" guid="{60ab12e5-bdef-4168-bc16-a1a6a0823430}" relid="0x6">
 				<name>narrow</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -3962,7 +3862,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>narrowing due to side etching</value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000019" kind="Model" role="Model" guid="{a98f0247-4547-4be2-a1af-4ad5bce436b5}" relid="0xc">
+			<atom id="id-0066-0000001c" kind="Model" role="Model" guid="{a98f0247-4547-4be2-a1af-4ad5bce436b5}" relid="0xc">
 				<name>PhysicsModelList</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -4021,8 +3921,8 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Icon" status="meta">
 					<value></value>
 				</attribute>
-				<attribute kind="InRootFolder" status="meta">
-					<value>false</value>
+				<attribute kind="InRootFolder">
+					<value>true</value>
 				</attribute>
 				<attribute kind="InstanceIcon" status="meta">
 					<value></value>
@@ -4082,39 +3982,39 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<connection id="id-0068-00000015" kind="HasAttribute" role="HasAttribute" guid="{6f1c1ab3-d2f0-49e3-8238-dac9234d0f1f}" relid="0x3">
+			<connection id="id-0068-00000018" kind="HasAttribute" role="HasAttribute" guid="{6f1c1ab3-d2f0-49e3-8238-dac9234d0f1f}" relid="0x3">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>WeE</value>
 				</regnode>
-				<connpoint role="dst" target="id-0066-00000014"/>
-				<connpoint role="src" target="id-0066-00000015"/>
+				<connpoint role="dst" target="id-0066-00000017"/>
+				<connpoint role="src" target="id-0066-00000018"/>
 			</connection>
-			<connection id="id-0068-00000016" kind="HasAttribute" role="HasAttribute" guid="{fbccf4d9-ef59-43df-a967-4f2584253f8b}" relid="0x8">
+			<connection id="id-0068-00000019" kind="HasAttribute" role="HasAttribute" guid="{fbccf4d9-ef59-43df-a967-4f2584253f8b}" relid="0x8">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>Ee</value>
 				</regnode>
-				<connpoint role="dst" target="id-0066-00000014"/>
-				<connpoint role="src" target="id-0066-00000016"/>
+				<connpoint role="dst" target="id-0066-00000017"/>
+				<connpoint role="src" target="id-0066-00000019"/>
 			</connection>
-			<connection id="id-0068-00000017" kind="HasAttribute" role="HasAttribute" guid="{ce6b24f0-5e5a-4397-885d-6d7c475372e3}" relid="0x9">
+			<connection id="id-0068-0000001a" kind="HasAttribute" role="HasAttribute" guid="{ce6b24f0-5e5a-4397-885d-6d7c475372e3}" relid="0x9">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>eE</value>
 				</regnode>
-				<connpoint role="dst" target="id-0066-00000014"/>
-				<connpoint role="src" target="id-0066-00000017"/>
+				<connpoint role="dst" target="id-0066-00000017"/>
+				<connpoint role="src" target="id-0066-0000001a"/>
 			</connection>
-			<connection id="id-0068-00000018" kind="HasAttribute" role="HasAttribute" guid="{8b5a80fb-6ade-45af-83b2-4c8a34651b98}" relid="0xa">
+			<connection id="id-0068-0000001b" kind="HasAttribute" role="HasAttribute" guid="{8b5a80fb-6ade-45af-83b2-4c8a34651b98}" relid="0xa">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>eE</value>
 				</regnode>
-				<connpoint role="dst" target="id-0066-00000014"/>
-				<connpoint role="src" target="id-0066-00000018"/>
+				<connpoint role="dst" target="id-0066-00000017"/>
+				<connpoint role="src" target="id-0066-0000001b"/>
 			</connection>
-			<connection id="id-0068-00000019" kind="Containment" role="Containment" guid="{a723ac2e-affc-458a-8e37-12859a656593}" relid="0xd">
+			<connection id="id-0068-0000001c" kind="Containment" role="Containment" guid="{a723ac2e-affc-458a-8e37-12859a656593}" relid="0xd">
 				<name>Containment</name>
 				<attribute kind="Cardinality" status="meta">
 					<value>0..*</value>
@@ -4125,20 +4025,20 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename" status="meta">
 					<value></value>
 				</attribute>
-				<connpoint role="src" target="id-0066-00000014"/>
-				<connpoint role="dst" target="id-0066-00000019"/>
+				<connpoint role="src" target="id-0066-00000017"/>
+				<connpoint role="dst" target="id-0066-0000001c"/>
 			</connection>
-			<connection id="id-0068-0000001a" kind="HasAspect" role="HasAspect" guid="{67f03225-cb10-41a2-91fc-7b370a1bbaef}" relid="0xe">
+			<connection id="id-0068-0000001d" kind="HasAspect" role="HasAspect" guid="{67f03225-cb10-41a2-91fc-7b370a1bbaef}" relid="0xe">
 				<name>HasAspect</name>
-				<connpoint role="dst" target="id-0066-00000019"/>
+				<connpoint role="dst" target="id-0066-0000001c"/>
 				<connpoint role="src" target="id-0069-00000001"/>
 			</connection>
-			<connection id="id-0068-0000001b" kind="HasAspect" role="HasAspect" guid="{5d99deb3-b443-4a86-b111-1f3e304c1626}" relid="0xf">
+			<connection id="id-0068-0000001e" kind="HasAspect" role="HasAspect" guid="{5d99deb3-b443-4a86-b111-1f3e304c1626}" relid="0xf">
 				<name>HasAspect</name>
-				<connpoint role="dst" target="id-0066-00000014"/>
+				<connpoint role="dst" target="id-0066-00000017"/>
 				<connpoint role="src" target="id-0069-00000001"/>
 			</connection>
-			<set id="id-0069-00000001" kind="Aspect" role="Aspect" guid="{9d9edee6-fcfe-4724-847d-0f107f47dcc9}" relid="0xb" members="id-0066-00000014 id-0066-00000019">
+			<set id="id-0069-00000001" kind="Aspect" role="Aspect" guid="{9d9edee6-fcfe-4724-847d-0f107f47dcc9}" relid="0xb" members="id-0066-00000017 id-0066-0000001c">
 				<name>StdModel</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -4160,16 +4060,16 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</attribute>
 			</set>
 		</model>
-		<model id="id-0065-00000004" kind="ParadigmSheet" guid="{a725ec9f-5ef2-4fe0-886f-247b5b806ae8}" relid="0x4" childrelidcntr="0x3e">
+		<model id="id-0065-00000004" kind="ParadigmSheet" guid="{a725ec9f-5ef2-4fe0-886f-247b5b806ae8}" relid="0x4" childrelidcntr="0x40">
 			<name>Connectivity</name>
-			<atom id="id-0066-0000001a" kind="Connection" role="Connection" guid="{5a810f4d-3fe2-4250-8f7d-d4fbf2211d5b}" relid="0x26">
+			<atom id="id-0066-0000001d" kind="Connection" role="Connection" guid="{5a810f4d-3fe2-4250-8f7d-d4fbf2211d5b}" relid="0x26">
 				<name>Line</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>200,266</value>
+							<value>179,266</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -4243,7 +4143,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-0000001b" kind="Model" role="Model" guid="{56678cfe-62c8-4f59-a4d7-fdc37bd242f1}" relid="0x30">
+			<atom id="id-0066-0000001e" kind="Model" role="Model" guid="{56678cfe-62c8-4f59-a4d7-fdc37bd242f1}" relid="0x30">
 				<name>Terminal</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -4363,7 +4263,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-0000001c" kind="Connector" role="Connector" guid="{b383d533-1f1f-4623-9b85-de7e8583b20c}" relid="0x32">
+			<atom id="id-0066-0000001f" kind="Connector" role="Connector" guid="{b383d533-1f1f-4623-9b85-de7e8583b20c}" relid="0x32">
 				<name>Connector</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -4387,14 +4287,14 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-0000001d" kind="Inheritance" role="Inheritance" guid="{90025556-2bc9-48ff-8719-1f0a422e4bc8}" relid="0x3b">
+			<atom id="id-0066-00000020" kind="Inheritance" role="Inheritance" guid="{90025556-2bc9-48ff-8719-1f0a422e4bc8}" relid="0x3b">
 				<name>Inheritance</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>465,348</value>
+							<value>458,467</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -4412,7 +4312,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Constraints" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>465,348</value>
+							<value>213,341</value>
 						</regnode>
 					</regnode>
 					<regnode name="Visualization" status="undefined">
@@ -4423,14 +4323,95 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<reference id="id-0067-00000008" kind="ModelProxy" role="ModelProxy" guid="{d8292a4c-318b-4291-a9bd-3e14736939c0}" relid="0x7" referred="id-0066-00000025">
+			<atom id="id-0066-0000002e" kind="Constraint" role="Constraint" guid="{d26ccea7-eeff-4c5f-ad5a-364749a97d5b}" relid="0x3f">
+				<name>TwoTermCardConstraint</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>692,286</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>356,244</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AddSetEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangeAttributeEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangePropertyEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangeRelationEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="CloseEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ConnectEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ConstraintDescription">
+					<value>Must have exactly 2 terminals</value>
+				</attribute>
+				<attribute kind="ConstraintEqn">
+					<value>self.parts(&quot;leads&quot;)-&gt;size() = 2</value>
+				</attribute>
+				<attribute kind="ConstraintParam" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ConstraintPriority" status="meta">
+					<value>2</value>
+				</attribute>
+				<attribute kind="CreateEvent">
+					<value>true</value>
+				</attribute>
+				<attribute kind="DeleteEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="Depth" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="DeriveEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="DisconnectEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LostChildEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="MoveEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NewChildEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ReferenceEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="RemoveSetEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="UnReferenceEvent" status="meta">
+					<value>false</value>
+				</attribute>
+			</atom>
+			<reference id="id-0067-0000000a" kind="ModelProxy" role="ModelProxy" guid="{d8292a4c-318b-4291-a9bd-3e14736939c0}" relid="0x7" referred="id-0066-00000028">
 				<name>MultiTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>628,322</value>
+							<value>621,49</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -4546,14 +4527,14 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-00000009" kind="ModelProxy" role="ModelProxy" guid="{17d75dc3-0989-4511-9ff8-ee15003fb24d}" relid="0x8" referred="id-0066-00000024">
-				<name>UBiTermElementProxy</name>
+			<reference id="id-0067-0000000b" kind="ModelProxy" role="ModelProxy" guid="{17d75dc3-0989-4511-9ff8-ee15003fb24d}" relid="0x8" referred="id-0066-00000027">
+				<name>TwoTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>629,434</value>
+							<value>636,196</value>
 						</regnode>
 						<regnode name="preferredSize" isopaque="yes">
 							<value>143,58</value>
@@ -4580,7 +4561,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>8,154</value>
+							<value>13,154</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -4669,7 +4650,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-0000000a" kind="ModelProxy" role="ModelProxy" guid="{b0f5b2e8-b704-4d17-ac18-b1e1c5ab6ffa}" relid="0x2a" referred="id-0066-00000026">
+			<reference id="id-0067-0000000c" kind="ModelProxy" role="ModelProxy" guid="{b0f5b2e8-b704-4d17-ac18-b1e1c5ab6ffa}" relid="0x2a" referred="id-0066-00000029">
 				<name>ElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -4694,7 +4675,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Constraints" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>191,154</value>
+							<value>198,147</value>
 						</regnode>
 					</regnode>
 					<regnode name="Visualization" status="undefined">
@@ -4789,14 +4770,14 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-0000000b" kind="ModelProxy" role="ModelProxy" guid="{4e9d9c31-d1a5-401a-9a31-446ac75c0f1a}" relid="0x37" referred="id-0066-00000029">
-				<name>OBiTermElementProxy</name>
+			<reference id="id-0067-0000000d" kind="ModelProxy" role="ModelProxy" guid="{4e9d9c31-d1a5-401a-9a31-446ac75c0f1a}" relid="0x37" referred="id-0066-0000002c">
+				<name>BiTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>629,434</value>
+							<value>356,378</value>
 						</regnode>
 						<regnode name="preferredSize" isopaque="yes">
 							<value>143,58</value>
@@ -4820,7 +4801,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Constraints" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>121,231</value>
+							<value>47,301</value>
 						</regnode>
 					</regnode>
 					<regnode name="Visualization" status="undefined">
@@ -4915,14 +4896,14 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-0000000c" kind="ModelProxy" role="ModelProxy" guid="{3fca7092-5183-4937-986d-19bf02f4d699}" relid="0x3a" referred="id-0066-0000002a">
+			<reference id="id-0067-0000000e" kind="ModelProxy" role="ModelProxy" guid="{3fca7092-5183-4937-986d-19bf02f4d699}" relid="0x3a" referred="id-0066-0000002d">
 				<name>TriTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>629,434</value>
+							<value>503,511</value>
 						</regnode>
 						<regnode name="preferredSize" isopaque="yes">
 							<value>143,58</value>
@@ -4946,7 +4927,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Constraints" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>121,231</value>
+							<value>248,357</value>
 						</regnode>
 					</regnode>
 					<regnode name="Visualization" status="undefined">
@@ -5041,7 +5022,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<connection id="id-0068-0000001c" kind="Containment" role="Containment" guid="{00797b42-768b-46c5-a96c-c06677a4b0f8}" relid="0x2c">
+			<connection id="id-0068-0000001f" kind="Containment" role="Containment" guid="{00797b42-768b-46c5-a96c-c06677a4b0f8}" relid="0x2c">
 				<name>Containment</name>
 				<attribute kind="Cardinality" status="meta">
 					<value>0..*</value>
@@ -5052,10 +5033,10 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename" status="meta">
 					<value></value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001a"/>
-				<connpoint role="dst" target="id-0067-0000000a"/>
+				<connpoint role="src" target="id-0066-0000001d"/>
+				<connpoint role="dst" target="id-0067-0000000c"/>
 			</connection>
-			<connection id="id-0068-0000001d" kind="Containment" role="Containment" guid="{98f8dd4b-0f7f-45fa-9204-4472e5beec02}" relid="0x31">
+			<connection id="id-0068-00000020" kind="Containment" role="Containment" guid="{98f8dd4b-0f7f-45fa-9204-4472e5beec02}" relid="0x31">
 				<name>Containment</name>
 				<attribute kind="Cardinality">
 					<value>2..*</value>
@@ -5066,10 +5047,10 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename">
 					<value>leads</value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001b"/>
-				<connpoint role="dst" target="id-0067-00000008"/>
+				<connpoint role="src" target="id-0066-0000001e"/>
+				<connpoint role="dst" target="id-0067-0000000a"/>
 			</connection>
-			<connection id="id-0068-0000001e" kind="SourceToConnector" role="SourceToConnector" guid="{f90b2f8a-e0eb-44e7-9a10-16d78c07cf78}" relid="0x33">
+			<connection id="id-0068-00000021" kind="SourceToConnector" role="SourceToConnector" guid="{f90b2f8a-e0eb-44e7-9a10-16d78c07cf78}" relid="0x33">
 				<name>SourceToConnector</name>
 				<attribute kind="Cardinality" status="meta">
 					<value>0..*</value>
@@ -5077,10 +5058,10 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="srcRolename" status="meta">
 					<value>src</value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001b"/>
-				<connpoint role="dst" target="id-0066-0000001c"/>
+				<connpoint role="src" target="id-0066-0000001e"/>
+				<connpoint role="dst" target="id-0066-0000001f"/>
 			</connection>
-			<connection id="id-0068-0000001f" kind="ConnectorToDestination" role="ConnectorToDestination" guid="{e1042a58-17b5-4ac7-9cbc-d442c52829b8}" relid="0x34">
+			<connection id="id-0068-00000022" kind="ConnectorToDestination" role="ConnectorToDestination" guid="{e1042a58-17b5-4ac7-9cbc-d442c52829b8}" relid="0x34">
 				<name>ConnectorToDestination</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>S</value>
@@ -5091,15 +5072,15 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="dstRolename" status="meta">
 					<value>dst</value>
 				</attribute>
-				<connpoint role="dst" target="id-0066-0000001b"/>
-				<connpoint role="src" target="id-0066-0000001c"/>
+				<connpoint role="dst" target="id-0066-0000001e"/>
+				<connpoint role="src" target="id-0066-0000001f"/>
 			</connection>
-			<connection id="id-0068-00000020" kind="AssociationClass" role="AssociationClass" guid="{580cffbd-7dee-475f-970f-1b9f0c27ee3d}" relid="0x35">
+			<connection id="id-0068-00000023" kind="AssociationClass" role="AssociationClass" guid="{580cffbd-7dee-475f-970f-1b9f0c27ee3d}" relid="0x35">
 				<name>AssociationClass</name>
-				<connpoint role="src" target="id-0066-0000001a"/>
-				<connpoint role="dst" target="id-0066-0000001c"/>
+				<connpoint role="src" target="id-0066-0000001d"/>
+				<connpoint role="dst" target="id-0066-0000001f"/>
 			</connection>
-			<connection id="id-0068-00000021" kind="Containment" role="Containment" guid="{3e9be908-f976-4552-b869-4321bd693ec4}" relid="0x36">
+			<connection id="id-0068-00000024" kind="Containment" role="Containment" guid="{3e9be908-f976-4552-b869-4321bd693ec4}" relid="0x36">
 				<name>Containment</name>
 				<attribute kind="Cardinality">
 					<value>2</value>
@@ -5110,10 +5091,10 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename">
 					<value>leads</value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001b"/>
-				<connpoint role="dst" target="id-0067-00000009"/>
+				<connpoint role="src" target="id-0066-0000001e"/>
+				<connpoint role="dst" target="id-0067-0000000b"/>
 			</connection>
-			<connection id="id-0068-00000022" kind="Containment" role="Containment" guid="{8aabfdde-9e8b-44df-b6c3-46ac6e114d3a}" relid="0x38">
+			<connection id="id-0068-00000025" kind="Containment" role="Containment" guid="{8aabfdde-9e8b-44df-b6c3-46ac6e114d3a}" relid="0x38">
 				<name>Containment</name>
 				<attribute kind="Cardinality">
 					<value>1</value>
@@ -5124,10 +5105,10 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename">
 					<value>secondary</value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001b"/>
-				<connpoint role="dst" target="id-0067-0000000b"/>
+				<connpoint role="src" target="id-0066-0000001e"/>
+				<connpoint role="dst" target="id-0067-0000000d"/>
 			</connection>
-			<connection id="id-0068-00000023" kind="Containment" role="Containment" guid="{f0387e29-9660-4e65-804b-1e3af3e3667d}" relid="0x39">
+			<connection id="id-0068-00000026" kind="Containment" role="Containment" guid="{f0387e29-9660-4e65-804b-1e3af3e3667d}" relid="0x39">
 				<name>Containment</name>
 				<attribute kind="Cardinality">
 					<value>1</value>
@@ -5138,23 +5119,23 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename">
 					<value>primary</value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001b"/>
-				<connpoint role="dst" target="id-0067-0000000b"/>
+				<connpoint role="src" target="id-0066-0000001e"/>
+				<connpoint role="dst" target="id-0067-0000000d"/>
 			</connection>
-			<connection id="id-0068-00000024" kind="BaseInheritance" role="BaseInheritance" guid="{278cdb4d-fb36-413e-8cee-59a5ca826336}" relid="0x3c">
+			<connection id="id-0068-00000027" kind="BaseInheritance" role="BaseInheritance" guid="{278cdb4d-fb36-413e-8cee-59a5ca826336}" relid="0x3c">
 				<name>BaseInheritance</name>
-				<connpoint role="dst" target="id-0066-0000001d"/>
-				<connpoint role="src" target="id-0067-0000000b"/>
+				<connpoint role="dst" target="id-0066-00000020"/>
+				<connpoint role="src" target="id-0067-0000000d"/>
 			</connection>
-			<connection id="id-0068-00000025" kind="DerivedInheritance" role="DerivedInheritance" guid="{ac199cc9-ba68-4dd7-816a-f537a4c01807}" relid="0x3d">
+			<connection id="id-0068-00000028" kind="DerivedInheritance" role="DerivedInheritance" guid="{ac199cc9-ba68-4dd7-816a-f537a4c01807}" relid="0x3d">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>S</value>
 				</regnode>
-				<connpoint role="src" target="id-0066-0000001d"/>
-				<connpoint role="dst" target="id-0067-0000000c"/>
+				<connpoint role="src" target="id-0066-00000020"/>
+				<connpoint role="dst" target="id-0067-0000000e"/>
 			</connection>
-			<connection id="id-0068-00000026" kind="Containment" role="Containment" guid="{950bca2d-7769-42df-bc65-9076575086b7}" relid="0x3e">
+			<connection id="id-0068-00000029" kind="Containment" role="Containment" guid="{950bca2d-7769-42df-bc65-9076575086b7}" relid="0x3e">
 				<name>Containment</name>
 				<attribute kind="Cardinality">
 					<value>1</value>
@@ -5165,13 +5146,18 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename">
 					<value>tertiary</value>
 				</attribute>
-				<connpoint role="src" target="id-0066-0000001b"/>
-				<connpoint role="dst" target="id-0067-0000000c"/>
+				<connpoint role="src" target="id-0066-0000001e"/>
+				<connpoint role="dst" target="id-0067-0000000e"/>
+			</connection>
+			<connection id="id-0068-0000003d" kind="HasConstraint" role="HasConstraint" guid="{bda04ac8-1820-42ce-8319-fde5b5426f5b}" relid="0x40">
+				<name>HasConstraint</name>
+				<connpoint role="src" target="id-0066-0000002e"/>
+				<connpoint role="dst" target="id-0067-0000000b"/>
 			</connection>
 		</model>
 		<model id="id-0065-00000005" kind="ParadigmSheet" guid="{7591e858-b255-4300-bbf7-297377b8f8ec}" relid="0x5" childrelidcntr="0x9">
 			<name>Location</name>
-			<atom id="id-0066-0000001e" kind="Atom" role="Atom" guid="{cad1a883-4b8c-496d-9285-fa0b29a71af4}" relid="0x1">
+			<atom id="id-0066-00000021" kind="Atom" role="Atom" guid="{cad1a883-4b8c-496d-9285-fa0b29a71af4}" relid="0x1">
 				<name>Position2D</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5285,7 +5271,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-0000001f" kind="Atom" role="Atom" guid="{4883e3f1-6be0-4737-9d58-91d3071641c4}" relid="0x2">
+			<atom id="id-0066-00000022" kind="Atom" role="Atom" guid="{4883e3f1-6be0-4737-9d58-91d3071641c4}" relid="0x2">
 				<name>Position</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5399,7 +5385,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000020" kind="Inheritance" role="Inheritance" guid="{4de76b8f-4c3c-46c4-89c0-c57f09102106}" relid="0x3">
+			<atom id="id-0066-00000023" kind="Inheritance" role="Inheritance" guid="{4de76b8f-4c3c-46c4-89c0-c57f09102106}" relid="0x3">
 				<name>Inheritance</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5435,7 +5421,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-00000021" kind="FieldAttribute" role="FieldAttribute" guid="{dc288c15-f95d-40b7-aa8d-eca48292a1a7}" relid="0x6">
+			<atom id="id-0066-00000024" kind="FieldAttribute" role="FieldAttribute" guid="{dc288c15-f95d-40b7-aa8d-eca48292a1a7}" relid="0x6">
 				<name>y_ord</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5477,7 +5463,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000022" kind="FieldAttribute" role="FieldAttribute" guid="{e329d9bb-fbe9-4686-9e02-e5b8289f3278}" relid="0x7">
+			<atom id="id-0066-00000025" kind="FieldAttribute" role="FieldAttribute" guid="{e329d9bb-fbe9-4686-9e02-e5b8289f3278}" relid="0x7">
 				<name>x_ord</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5519,39 +5505,39 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<connection id="id-0068-00000027" kind="BaseInheritance" role="BaseInheritance" guid="{9d8c2dbc-8856-478b-a0f5-b3fd53c8d053}" relid="0x4">
+			<connection id="id-0068-0000002a" kind="BaseInheritance" role="BaseInheritance" guid="{9d8c2dbc-8856-478b-a0f5-b3fd53c8d053}" relid="0x4">
 				<name>BaseInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>Sn</value>
 				</regnode>
-				<connpoint role="src" target="id-0066-0000001f"/>
-				<connpoint role="dst" target="id-0066-00000020"/>
+				<connpoint role="src" target="id-0066-00000022"/>
+				<connpoint role="dst" target="id-0066-00000023"/>
 			</connection>
-			<connection id="id-0068-00000028" kind="DerivedInheritance" role="DerivedInheritance" guid="{4300e955-bcae-4764-881b-38668a8e7045}" relid="0x5">
+			<connection id="id-0068-0000002b" kind="DerivedInheritance" role="DerivedInheritance" guid="{4300e955-bcae-4764-881b-38668a8e7045}" relid="0x5">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>S</value>
 				</regnode>
-				<connpoint role="dst" target="id-0066-0000001e"/>
-				<connpoint role="src" target="id-0066-00000020"/>
+				<connpoint role="dst" target="id-0066-00000021"/>
+				<connpoint role="src" target="id-0066-00000023"/>
 			</connection>
-			<connection id="id-0068-00000029" kind="HasAttribute" role="HasAttribute" guid="{e67c7a40-bc46-49f0-8615-4543820ef454}" relid="0x8">
+			<connection id="id-0068-0000002c" kind="HasAttribute" role="HasAttribute" guid="{e67c7a40-bc46-49f0-8615-4543820ef454}" relid="0x8">
 				<name>HasAttribute</name>
 				<regnode name="autorouterPref" isopaque="yes">
 					<value>W</value>
 				</regnode>
-				<connpoint role="dst" target="id-0066-0000001e"/>
-				<connpoint role="src" target="id-0066-00000022"/>
+				<connpoint role="dst" target="id-0066-00000021"/>
+				<connpoint role="src" target="id-0066-00000025"/>
 			</connection>
-			<connection id="id-0068-0000002a" kind="HasAttribute" role="HasAttribute" guid="{fef4a4e0-6029-4e89-9637-df2000ebf67c}" relid="0x9">
+			<connection id="id-0068-0000002d" kind="HasAttribute" role="HasAttribute" guid="{fef4a4e0-6029-4e89-9637-df2000ebf67c}" relid="0x9">
 				<name>HasAttribute</name>
-				<connpoint role="dst" target="id-0066-0000001e"/>
-				<connpoint role="src" target="id-0066-00000021"/>
+				<connpoint role="dst" target="id-0066-00000021"/>
+				<connpoint role="src" target="id-0066-00000024"/>
 			</connection>
 		</model>
-		<model id="id-0065-00000006" kind="ParadigmSheet" guid="{a347fbe2-edec-4d99-a47e-ea74e062895a}" relid="0x6" childrelidcntr="0xc">
+		<model id="id-0065-00000006" kind="ParadigmSheet" guid="{a347fbe2-edec-4d99-a47e-ea74e062895a}" relid="0x6" childrelidcntr="0xd">
 			<name>AspectSheet</name>
-			<reference id="id-0067-00000001" kind="ConnectionProxy" role="ConnectionProxy" guid="{20c5d66c-dc5b-4445-a986-3a01da2731ff}" relid="0x2" referred="id-0066-0000001a">
+			<reference id="id-0067-00000001" kind="ConnectionProxy" role="ConnectionProxy" guid="{20c5d66c-dc5b-4445-a986-3a01da2731ff}" relid="0x2" referred="id-0066-0000001d">
 				<name>LineProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5599,7 +5585,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>false</value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-00000002" kind="ModelProxy" role="ModelProxy" guid="{39058c25-e30e-4fee-9ac1-c49ae7c2f1a6}" relid="0x6" referred="id-0066-0000001b">
+			<reference id="id-0067-00000002" kind="ModelProxy" role="ModelProxy" guid="{39058c25-e30e-4fee-9ac1-c49ae7c2f1a6}" relid="0x6" referred="id-0066-0000001e">
 				<name>TerminallProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5719,7 +5705,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-00000003" kind="ModelProxy" role="ModelProxy" guid="{a1ccc4a5-1996-4907-9c04-6a526489b24d}" relid="0x9" referred="id-0066-00000019">
+			<reference id="id-0067-00000003" kind="ModelProxy" role="ModelProxy" guid="{a1ccc4a5-1996-4907-9c04-6a526489b24d}" relid="0x9" referred="id-0066-0000001c">
 				<name>PhysicsModelListProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5839,7 +5825,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-00000004" kind="ModelProxy" role="ModelProxy" guid="{0ecae638-eede-421f-bf2f-cd69d13a8401}" relid="0xa" referred="id-0066-00000014">
+			<reference id="id-0067-00000004" kind="ModelProxy" role="ModelProxy" guid="{0ecae638-eede-421f-bf2f-cd69d13a8401}" relid="0xa" referred="id-0066-00000017">
 				<name>ResistanceDiffusionModelProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -5959,7 +5945,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<reference id="id-0067-0000000d" kind="ModelProxy" role="ModelProxy" guid="{d8303d16-0017-4e10-877d-9110852c3f63}" relid="0x3" referred="id-0066-00000026">
+			<reference id="id-0067-0000000f" kind="ModelProxy" role="ModelProxy" guid="{d8303d16-0017-4e10-877d-9110852c3f63}" relid="0x3" referred="id-0066-00000029">
 				<name>ElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6079,24 +6065,133 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
-			<connection id="id-0068-0000002b" kind="HasAspect" role="HasAspect" guid="{319ecb68-b223-45e5-b774-51ddd6b5182a}" relid="0x4">
+			<reference id="id-0067-00000010" kind="ReferenceProxy" role="ReferenceProxy" guid="{4a750b84-fd66-46a2-b05e-206f3f264e2c}" relid="0xd" referred="id-0066-00000010">
+				<name>DiffusionModelReferenceProxy</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>530,126</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>530,126</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>516,112</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>530,126</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>216,161</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InRootFolder" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</reference>
+			<connection id="id-0068-0000002e" kind="HasAspect" role="HasAspect" guid="{319ecb68-b223-45e5-b774-51ddd6b5182a}" relid="0x4">
 				<name>HasAspect</name>
-				<connpoint role="dst" target="id-0067-0000000d"/>
+				<connpoint role="dst" target="id-0067-0000000f"/>
 				<connpoint role="src" target="id-0069-00000003"/>
 			</connection>
-			<connection id="id-0068-0000002c" kind="HasAspect" role="HasAspect" guid="{eddb9b6e-d170-44fa-96f9-58c8254ac9c9}" relid="0x7">
+			<connection id="id-0068-0000002f" kind="HasAspect" role="HasAspect" guid="{eddb9b6e-d170-44fa-96f9-58c8254ac9c9}" relid="0x7">
 				<name>HasAspect</name>
 				<connpoint role="dst" target="id-0067-00000002"/>
 				<connpoint role="src" target="id-0069-00000003"/>
 			</connection>
-			<connection id="id-0068-0000002d" kind="HasAspect" role="HasAspect" guid="{94800072-b2bb-450f-bac6-5a17d7010930}" relid="0xb">
+			<connection id="id-0068-00000030" kind="HasAspect" role="HasAspect" guid="{94800072-b2bb-450f-bac6-5a17d7010930}" relid="0xb">
 				<name>HasAspect</name>
 				<connpoint role="dst" target="id-0067-00000003"/>
-				<connpoint role="src" target="id-0069-00000002"/>
-			</connection>
-			<connection id="id-0068-0000002e" kind="HasAspect" role="HasAspect" guid="{6cae0cbc-942a-414e-8d5b-bcba8528ebba}" relid="0xc">
-				<name>HasAspect</name>
-				<connpoint role="dst" target="id-0067-00000004"/>
 				<connpoint role="src" target="id-0069-00000002"/>
 			</connection>
 			<set id="id-0069-00000002" kind="Aspect" role="Aspect" guid="{40662680-1957-4e67-8d72-9f959b908284}" relid="0x8" members="id-0067-00000003 id-0067-00000004">
@@ -6120,7 +6215,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</set>
-			<set id="id-0069-00000003" kind="Aspect" role="Aspect" guid="{b371d0e6-e1a9-4505-98e0-bf618c93b6b8}" relid="0x1" members="id-0067-00000001 id-0067-00000002 id-0067-0000000d">
+			<set id="id-0069-00000003" kind="Aspect" role="Aspect" guid="{b371d0e6-e1a9-4505-98e0-bf618c93b6b8}" relid="0x1" members="id-0067-00000001 id-0067-00000002 id-0067-0000000f id-0067-00000010">
 				<name>Layout</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6144,7 +6239,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 		</model>
 		<model id="id-0065-00000007" kind="ParadigmSheet" guid="{9ecfd88e-a791-4dce-981e-c830f6100c40}" relid="0x7" childrelidcntr="0x12">
 			<name>GeneralElement</name>
-			<atom id="id-0066-00000023" kind="Inheritance" role="Inheritance" guid="{55623b74-0a8b-4927-972e-b20061953756}" relid="0x5">
+			<atom id="id-0066-00000026" kind="Inheritance" role="Inheritance" guid="{55623b74-0a8b-4927-972e-b20061953756}" relid="0x5">
 				<name>CardinalityInheritance</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6180,7 +6275,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-00000024" kind="Model" role="Model" guid="{5893bf15-9d61-4e58-8f3e-a979e9e68fd4}" relid="0x4">
+			<atom id="id-0066-00000027" kind="Model" role="Model" guid="{5893bf15-9d61-4e58-8f3e-a979e9e68fd4}" relid="0x4">
 				<name>TwoTermElement</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6300,7 +6395,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000025" kind="Model" role="Model" guid="{db4f1b94-7a83-409d-aa17-a4116c1aeeb9}" relid="0x3">
+			<atom id="id-0066-00000028" kind="Model" role="Model" guid="{db4f1b94-7a83-409d-aa17-a4116c1aeeb9}" relid="0x3">
 				<name>MultiTermElement</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6420,7 +6515,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000026" kind="Model" role="Model" guid="{86e30825-85c5-478a-9a08-141dd693f080}" relid="0x2">
+			<atom id="id-0066-00000029" kind="Model" role="Model" guid="{86e30825-85c5-478a-9a08-141dd693f080}" relid="0x2">
 				<name>Element</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6540,7 +6635,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000027" kind="Model" role="Model" guid="{4a8ef3e2-19b5-4b2b-9845-58b3430481ed}" relid="0x7">
+			<atom id="id-0066-0000002a" kind="Model" role="Model" guid="{4a8ef3e2-19b5-4b2b-9845-58b3430481ed}" relid="0x7">
 				<name>Assembly</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6660,7 +6755,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-00000028" kind="Inheritance" role="Inheritance" guid="{b3b1f503-14c9-4a0b-8e3f-f4b021dc780a}" relid="0x6">
+			<atom id="id-0066-0000002b" kind="Inheritance" role="Inheritance" guid="{b3b1f503-14c9-4a0b-8e3f-f4b021dc780a}" relid="0x6">
 				<name>MultiTermType</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6696,7 +6791,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					</regnode>
 				</regnode>
 			</atom>
-			<atom id="id-0066-00000029" kind="Model" role="Model" guid="{efc25a2c-9d3e-477b-a4e1-a9ea5fd878a4}" relid="0xf">
+			<atom id="id-0066-0000002c" kind="Model" role="Model" guid="{efc25a2c-9d3e-477b-a4e1-a9ea5fd878a4}" relid="0xf">
 				<name>BiTermElement</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6727,7 +6822,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>50,288</value>
+							<value>119,357</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -6816,7 +6911,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<atom id="id-0066-0000002a" kind="Model" role="Model" guid="{915f296f-1642-4b3b-bbe8-997b2b3fe2bd}" relid="0x11">
+			<atom id="id-0066-0000002d" kind="Model" role="Model" guid="{915f296f-1642-4b3b-bbe8-997b2b3fe2bd}" relid="0x11">
 				<name>TriTermElement</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -6847,7 +6942,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="Visualization" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>50,288</value>
+							<value>12,217</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -6936,32 +7031,32 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<connection id="id-0068-0000002f" kind="BaseInheritance" role="BaseInheritance" guid="{c11c51c7-3b0e-446e-93ab-f7bc631ff702}" relid="0x8">
+			<connection id="id-0068-00000032" kind="BaseInheritance" role="BaseInheritance" guid="{c11c51c7-3b0e-446e-93ab-f7bc631ff702}" relid="0x8">
 				<name>BaseInheritance</name>
-				<connpoint role="dst" target="id-0066-00000023"/>
+				<connpoint role="dst" target="id-0066-00000026"/>
+				<connpoint role="src" target="id-0066-00000029"/>
+			</connection>
+			<connection id="id-0068-00000033" kind="DerivedInheritance" role="DerivedInheritance" guid="{95eac344-7fca-4a39-9ad3-ea116d17b52a}" relid="0x9">
+				<name>DerivedInheritance</name>
 				<connpoint role="src" target="id-0066-00000026"/>
+				<connpoint role="dst" target="id-0066-00000027"/>
 			</connection>
-			<connection id="id-0068-00000030" kind="DerivedInheritance" role="DerivedInheritance" guid="{95eac344-7fca-4a39-9ad3-ea116d17b52a}" relid="0x9">
+			<connection id="id-0068-00000034" kind="DerivedInheritance" role="DerivedInheritance" guid="{133b14bc-b230-484d-8535-0981b040041a}" relid="0xa">
 				<name>DerivedInheritance</name>
-				<connpoint role="src" target="id-0066-00000023"/>
-				<connpoint role="dst" target="id-0066-00000024"/>
-			</connection>
-			<connection id="id-0068-00000031" kind="DerivedInheritance" role="DerivedInheritance" guid="{133b14bc-b230-484d-8535-0981b040041a}" relid="0xa">
-				<name>DerivedInheritance</name>
-				<connpoint role="src" target="id-0066-00000023"/>
-				<connpoint role="dst" target="id-0066-00000025"/>
-			</connection>
-			<connection id="id-0068-00000032" kind="BaseInheritance" role="BaseInheritance" guid="{8006a515-b521-4a41-96bb-ffdd1f43d760}" relid="0xc">
-				<name>BaseInheritance</name>
-				<connpoint role="src" target="id-0066-00000025"/>
+				<connpoint role="src" target="id-0066-00000026"/>
 				<connpoint role="dst" target="id-0066-00000028"/>
 			</connection>
-			<connection id="id-0068-00000033" kind="DerivedInheritance" role="DerivedInheritance" guid="{a3386db9-aeb3-4d48-905d-844e5b05b097}" relid="0xd">
-				<name>DerivedInheritance</name>
-				<connpoint role="dst" target="id-0066-00000027"/>
+			<connection id="id-0068-00000035" kind="BaseInheritance" role="BaseInheritance" guid="{8006a515-b521-4a41-96bb-ffdd1f43d760}" relid="0xc">
+				<name>BaseInheritance</name>
 				<connpoint role="src" target="id-0066-00000028"/>
+				<connpoint role="dst" target="id-0066-0000002b"/>
 			</connection>
-			<connection id="id-0068-00000034" kind="Containment" role="Containment" guid="{6b7b7e6d-2d0a-4c70-8da5-7bdf9c7f2e39}" relid="0xe">
+			<connection id="id-0068-00000036" kind="DerivedInheritance" role="DerivedInheritance" guid="{a3386db9-aeb3-4d48-905d-844e5b05b097}" relid="0xd">
+				<name>DerivedInheritance</name>
+				<connpoint role="dst" target="id-0066-0000002a"/>
+				<connpoint role="src" target="id-0066-0000002b"/>
+			</connection>
+			<connection id="id-0068-00000037" kind="Containment" role="Containment" guid="{6b7b7e6d-2d0a-4c70-8da5-7bdf9c7f2e39}" relid="0xe">
 				<name>Containment</name>
 				<attribute kind="Cardinality" status="meta">
 					<value>0..*</value>
@@ -6972,18 +7067,18 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="Rolename" status="meta">
 					<value></value>
 				</attribute>
-				<connpoint role="src" target="id-0066-00000026"/>
-				<connpoint role="dst" target="id-0066-00000027"/>
-			</connection>
-			<connection id="id-0068-00000035" kind="DerivedInheritance" role="DerivedInheritance" guid="{16d63983-f43c-4858-a9a4-814b5110d6a7}" relid="0x10">
-				<name>DerivedInheritance</name>
-				<connpoint role="src" target="id-0066-00000023"/>
-				<connpoint role="dst" target="id-0066-00000029"/>
-			</connection>
-			<connection id="id-0068-00000036" kind="DerivedInheritance" role="DerivedInheritance" guid="{ebf85783-2cec-4375-a34c-5ab6b905fa27}" relid="0x12">
-				<name>DerivedInheritance</name>
-				<connpoint role="src" target="id-0066-00000023"/>
+				<connpoint role="src" target="id-0066-00000029"/>
 				<connpoint role="dst" target="id-0066-0000002a"/>
+			</connection>
+			<connection id="id-0068-00000038" kind="DerivedInheritance" role="DerivedInheritance" guid="{16d63983-f43c-4858-a9a4-814b5110d6a7}" relid="0x10">
+				<name>DerivedInheritance</name>
+				<connpoint role="src" target="id-0066-00000026"/>
+				<connpoint role="dst" target="id-0066-0000002c"/>
+			</connection>
+			<connection id="id-0068-00000039" kind="DerivedInheritance" role="DerivedInheritance" guid="{ebf85783-2cec-4375-a34c-5ab6b905fa27}" relid="0x12">
+				<name>DerivedInheritance</name>
+				<connpoint role="src" target="id-0066-00000026"/>
+				<connpoint role="dst" target="id-0066-0000002d"/>
 			</connection>
 		</model>
 	</folder>

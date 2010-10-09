@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{BDD9DE70-A59E-4A12-8E32-1453622A6053}" cdate="Sat Oct 09 07:41:44 2010" mdate="Sat Oct 09 07:41:44 2010" version="" metaguid="{6A4368C3-3C3E-4705-9B4D-13307C854A71}" metaversion="" metaname="passive_electrical_circuit_metamodel">
+<project guid="{6913BA93-8A1E-4D95-A993-C83E0CFD4F6A}" cdate="Sat Oct 09 16:56:50 2010" mdate="Sat Oct 09 16:56:50 2010" version="" metaguid="{0D7BF41A-B049-4AA4-843B-9E932190DD35}" metaversion="" metaname="passive_electrical_circuit_metamodel">
 	<name>PassiveElectricalCircuits</name>
 	<comment></comment>
 	<author></author>
-	<folder id="id-006a-00000001" relid="0x1" childrelidcntr="0x1" kind="RootFolder" guid="{01439fe3-511f-43b0-970e-fb635cbb8e8b}">
+	<folder id="id-006a-00000001" relid="0x1" childrelidcntr="0x2" kind="RootFolder" guid="{01439fe3-511f-43b0-970e-fb635cbb8e8b}">
 		<name>PassiveElectricalCircuits</name>
 		<model id="id-0065-00000001" kind="Assembly" guid="{9a780c9c-57ab-4250-ab98-e841de61346f}" relid="0x1" childrelidcntr="0x1">
 			<name>RLC circuits</name>
-			<model id="id-0065-00000002" kind="Assembly" role="Assembly" guid="{be80ca7c-cd96-4528-98d8-8a1f895646a7}" relid="0x1" childrelidcntr="0xe">
+			<model id="id-0065-00000002" kind="Assembly" role="Assembly" guid="{be80ca7c-cd96-4528-98d8-8a1f895646a7}" relid="0x1" childrelidcntr="0xf">
 				<name>Series RLC</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="Layout" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>14,14</value>
+						</regnode>
+					</regnode>
+				</regnode>
 				<model id="id-0065-00000003" kind="Capacitor" role="Capacitor" guid="{73c6b67c-b90e-4c7c-afba-82da0fbf6c63}" relid="0x1" childrelidcntr="0x2">
 					<name>Capacitor</name>
 					<regnode name="PartRegs" status="undefined">
@@ -64,7 +73,7 @@
 					<attribute kind="inductance" status="meta">
 						<value>0</value>
 					</attribute>
-					<model id="id-0065-0000000b" kind="Terminal" role="leads" guid="{64b00ed4-5a76-4218-b680-c57e68ea48b6}" relid="0x1" childrelidcntr="0x0">
+					<model id="id-0065-00000007" kind="Terminal" role="leads" guid="{64b00ed4-5a76-4218-b680-c57e68ea48b6}" relid="0x1" childrelidcntr="0x0">
 						<name>leads</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -76,7 +85,7 @@
 							</regnode>
 						</regnode>
 					</model>
-					<model id="id-0065-0000000c" kind="Terminal" role="leads" guid="{77563e8c-e90e-4ebf-a9d5-a13ac6d03ff0}" relid="0x2" childrelidcntr="0x0">
+					<model id="id-0065-00000008" kind="Terminal" role="leads" guid="{77563e8c-e90e-4ebf-a9d5-a13ac6d03ff0}" relid="0x2" childrelidcntr="0x0">
 						<name>leads</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -89,7 +98,7 @@
 						</regnode>
 					</model>
 				</model>
-				<model id="id-0065-00000007" kind="Resistor" role="Resistor" guid="{6e156587-0d80-4222-92e8-c1471be17391}" relid="0x3" childrelidcntr="0x2">
+				<model id="id-0065-00000009" kind="Resistor" role="Resistor" guid="{6e156587-0d80-4222-92e8-c1471be17391}" relid="0x3" childrelidcntr="0x3">
 					<name>Resistor</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
@@ -115,7 +124,7 @@
 					<attribute kind="width" status="meta">
 						<value></value>
 					</attribute>
-					<model id="id-0065-0000000d" kind="Terminal" role="leads" guid="{30c8a18d-df33-4f73-89e1-85d5ba3a9e64}" relid="0x1" childrelidcntr="0x0">
+					<model id="id-0065-0000000a" kind="Terminal" role="leads" guid="{30c8a18d-df33-4f73-89e1-85d5ba3a9e64}" relid="0x1" childrelidcntr="0x0">
 						<name>leads</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -127,20 +136,32 @@
 							</regnode>
 						</regnode>
 					</model>
-					<model id="id-0065-0000000e" kind="Terminal" role="leads" guid="{cf6bb289-c226-4ccd-967f-4a77a6bdb09c}" relid="0x2" childrelidcntr="0x0">
+					<model id="id-0065-0000000b" kind="Terminal" role="leads" guid="{cf6bb289-c226-4ccd-967f-4a77a6bdb09c}" relid="0x2" childrelidcntr="0x0">
 						<name>leads</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
 								<value></value>
 								<regnode name="Position" isopaque="yes">
-									<value>553,217</value>
+									<value>644,189</value>
 								</regnode>
 							</regnode>
 						</regnode>
 					</model>
+					<reference id="id-0067-00000001" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{efd3fbcb-edef-48ed-9939-90ff9e8a8f20}" relid="0x3" referred="id-0065-00000012">
+						<name>DiffusionModelReference</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Layout" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>250,152</value>
+								</regnode>
+							</regnode>
+						</regnode>
+					</reference>
 				</model>
-				<model id="id-0065-00000008" kind="VoltageSource" role="VoltageSource" guid="{2363d236-8c5d-4084-b03e-eeda1596253f}" relid="0x4" childrelidcntr="0x2">
+				<model id="id-0065-0000000c" kind="VoltageSource" role="VoltageSource" guid="{2363d236-8c5d-4084-b03e-eeda1596253f}" relid="0x4" childrelidcntr="0x2">
 					<name>VoltageSource</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
@@ -151,7 +172,7 @@
 							</regnode>
 						</regnode>
 					</regnode>
-					<model id="id-0065-00000009" kind="Terminal" role="leads" guid="{e9c0c189-acbd-4139-8f0a-3fdce65ee08e}" relid="0x1" childrelidcntr="0x0">
+					<model id="id-0065-0000000d" kind="Terminal" role="leads" guid="{e9c0c189-acbd-4139-8f0a-3fdce65ee08e}" relid="0x1" childrelidcntr="0x0">
 						<name>leads</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -163,7 +184,7 @@
 							</regnode>
 						</regnode>
 					</model>
-					<model id="id-0065-0000000a" kind="Terminal" role="leads" guid="{e609eb88-89fe-43f5-8dcf-5b29ce104ba0}" relid="0x2" childrelidcntr="0x0">
+					<model id="id-0065-0000000e" kind="Terminal" role="leads" guid="{e609eb88-89fe-43f5-8dcf-5b29ce104ba0}" relid="0x2" childrelidcntr="0x0">
 						<name>leads</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -200,19 +221,70 @@
 						</regnode>
 					</regnode>
 				</model>
+				<model id="id-0065-00000013" kind="Resistor" role="Resistor" guid="{8faa9818-cc18-4155-8493-f2586a83f851}" relid="0xf" childrelidcntr="0x2">
+					<name>Resistor</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Layout" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>457,80</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="length" status="meta">
+						<value></value>
+					</attribute>
+					<attribute kind="resistance" status="meta">
+						<value>0</value>
+					</attribute>
+					<attribute kind="temp_1" status="meta">
+						<value>0</value>
+					</attribute>
+					<attribute kind="temp_2" status="meta">
+						<value>0</value>
+					</attribute>
+					<attribute kind="width" status="meta">
+						<value></value>
+					</attribute>
+					<model id="id-0065-00000014" kind="Terminal" role="leads" guid="{5dd810c0-88ff-4ed5-8603-d1e86ad376c2}" relid="0x1" childrelidcntr="0x0">
+						<name>leads</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Layout" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>154,189</value>
+								</regnode>
+							</regnode>
+						</regnode>
+					</model>
+					<model id="id-0065-00000015" kind="Terminal" role="leads" guid="{11d36e65-a068-4262-a029-9e593861408d}" relid="0x2" childrelidcntr="0x0">
+						<name>leads</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Layout" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>616,217</value>
+								</regnode>
+							</regnode>
+						</regnode>
+					</model>
+				</model>
 				<connection id="id-0068-00000001" kind="Line" role="Line" guid="{a34318f8-0b22-4cad-837b-1b79f9d56ca6}" relid="0x7">
 					<name>Line</name>
 					<connpoint role="dst" target="id-0065-00000004"/>
-					<connpoint role="src" target="id-0065-00000009"/>
+					<connpoint role="src" target="id-0065-0000000d"/>
 				</connection>
 				<connection id="id-0068-00000002" kind="Line" role="Line" guid="{52b4fbc3-3e63-431d-ad62-9b42f60d4dd9}" relid="0x8">
 					<name>Line</name>
 					<connpoint role="src" target="id-0065-00000004"/>
-					<connpoint role="dst" target="id-0065-0000000b"/>
+					<connpoint role="dst" target="id-0065-00000007"/>
 				</connection>
 				<connection id="id-0068-00000003" kind="Line" role="Line" guid="{659fb6d8-0ffd-468e-80a1-a8ec754751f4}" relid="0x9">
 					<name>Line</name>
-					<connpoint role="src" target="id-0065-0000000b"/>
+					<connpoint role="src" target="id-0065-00000007"/>
 					<connpoint role="dst" target="id-0065-0000000f"/>
 				</connection>
 				<connection id="id-0068-00000004" kind="Line" role="Line" guid="{4cd1dbce-b539-49c9-96ad-82bebcdec3ff}" relid="0xa">
@@ -220,29 +292,56 @@
 					<regnode name="autorouterPref" isopaque="yes">
 						<value>w</value>
 					</regnode>
-					<connpoint role="src" target="id-0065-0000000c"/>
+					<connpoint role="src" target="id-0065-00000008"/>
 					<connpoint role="dst" target="id-0065-00000010"/>
 				</connection>
 				<connection id="id-0068-00000005" kind="Line" role="Line" guid="{42f279fb-5c8b-4734-9c5e-494cba48a826}" relid="0xb">
 					<name>Line</name>
-					<connpoint role="src" target="id-0065-0000000b"/>
-					<connpoint role="dst" target="id-0065-0000000d"/>
+					<connpoint role="src" target="id-0065-00000007"/>
+					<connpoint role="dst" target="id-0065-0000000a"/>
 				</connection>
 				<connection id="id-0068-00000006" kind="Line" role="Line" guid="{921a0c51-f119-4a67-b6e6-afc308470be7}" relid="0xc">
 					<name>Line</name>
-					<connpoint role="dst" target="id-0065-0000000c"/>
-					<connpoint role="src" target="id-0065-0000000e"/>
+					<connpoint role="dst" target="id-0065-00000008"/>
+					<connpoint role="src" target="id-0065-0000000b"/>
 				</connection>
 				<connection id="id-0068-00000007" kind="Line" role="Line" guid="{c1e2dda7-b635-4a22-8c85-21127afe8561}" relid="0xd">
 					<name>Line</name>
 					<connpoint role="dst" target="id-0065-00000005"/>
-					<connpoint role="src" target="id-0065-0000000c"/>
+					<connpoint role="src" target="id-0065-00000008"/>
 				</connection>
 				<connection id="id-0068-00000008" kind="Line" role="Line" guid="{ac967f81-77ae-491d-9ef2-b8096832c4ca}" relid="0xe">
 					<name>Line</name>
 					<connpoint role="src" target="id-0065-00000005"/>
-					<connpoint role="dst" target="id-0065-0000000a"/>
+					<connpoint role="dst" target="id-0065-0000000e"/>
 				</connection>
+			</model>
+		</model>
+		<model id="id-0065-00000011" kind="PhysicsModelList" guid="{f6ab6c27-d123-43a8-bbe8-78e230ee48fb}" relid="0x2" childrelidcntr="0x1">
+			<name>ResistorModels</name>
+			<model id="id-0065-00000012" kind="ResistanceDiffusionModel" role="ResistanceDiffusionModel" guid="{4d0acc4a-ed7c-4f3f-80b1-73b935da810a}" relid="0x1" childrelidcntr="0x0">
+				<name>simiple</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="StdModel" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>14,14</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="defw">
+					<value>4</value>
+				</attribute>
+				<attribute kind="name">
+					<value>fred</value>
+				</attribute>
+				<attribute kind="narrow">
+					<value>1</value>
+				</attribute>
+				<attribute kind="rsh">
+					<value>7</value>
+				</attribute>
 			</model>
 		</model>
 	</folder>
