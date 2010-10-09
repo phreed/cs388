@@ -23,3 +23,15 @@ The language also makes use of component assemblies.
 Assemblies simply expose their terminals as ports.
 For this reason element terminals are modeled using contained terminal elements
 rather than connections.
+
+Work Products:
+A zip file named "eisele_fred_mp1.zip" containing...
+"passive_electrical_circuits_metamodel.xme"
+"passive_electrical_circuits_sample_model.xme"
+"passive_electrical_circuits_documentation.pdf"
+"icons" folder
+
+The pdf should contain:
+screenshots of gme screens for sample and metamodel with brief descriptions.
+
+
