@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{F5756EEB-1E63-43A1-88CC-8FC7EEE8792C}" cdate="Sat Oct 09 07:25:07 2010" mdate="Sat Oct 09 07:25:07 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
+<project guid="{6F39B408-8FC0-4EAA-B5E6-535253FB54DC}" cdate="Sat Oct 09 10:15:59 2010" mdate="Sat Oct 09 10:15:59 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
 	<name>passive_electrical_circuit_metamodel</name>
 	<comment>First mini-project for CS-388, Model-Integrated-Computing
 The intended audience for this DSML are operators of the ngspice electronic simulator.</comment>
@@ -87,6 +87,9 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 						<value></value>
 						<regnode name="Assembly" isopaque="yes">
 							<value>1093</value>
+						</regnode>
+						<regnode name="BFET" isopaque="yes">
+							<value>1167</value>
 						</regnode>
 						<regnode name="Capacitor" isopaque="yes">
 							<value>1102</value>
@@ -218,6 +221,15 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 							</regnode>
 						</regnode>
 					</regnode>
+					<regnode name="BFET" status="undefined">
+						<value></value>
+						<regnode name="Line" isopaque="yes">
+							<value>1163</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1168</value>
+							</regnode>
+						</regnode>
+					</regnode>
 					<regnode name="Capacitor" status="undefined">
 						<value></value>
 						<regnode name="Line" isopaque="yes">
@@ -276,6 +288,12 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<regnode name="PrimaryAspects" status="undefined">
 					<value></value>
 					<regnode name="Assembly:Line" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+					<regnode name="BFET:Line" status="undefined">
 						<value></value>
 						<regnode name="Layout" isopaque="yes">
 							<value>yes</value>
@@ -341,6 +359,24 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 							<value> </value>
 						</regnode>
 					</regnode>
+					<regnode name="BFET:primary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value> </value>
+						</regnode>
+					</regnode>
+					<regnode name="BFET:secondary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value> </value>
+						</regnode>
+					</regnode>
+					<regnode name="BFET:tertiary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value> </value>
+						</regnode>
+					</regnode>
 					<regnode name="Capacitor:leads" status="undefined">
 						<value></value>
 						<regnode name="Layout" isopaque="yes">
@@ -354,6 +390,18 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 						</regnode>
 					</regnode>
 					<regnode name="Diode:leads" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value> </value>
+						</regnode>
+					</regnode>
+					<regnode name="Diode:primary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value> </value>
+						</regnode>
+					</regnode>
+					<regnode name="Diode:secondary" status="undefined">
 						<value></value>
 						<regnode name="Layout" isopaque="yes">
 							<value> </value>
@@ -395,6 +443,27 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 							</regnode>
 						</regnode>
 					</regnode>
+					<regnode name="BFET" status="undefined">
+						<value></value>
+						<regnode name="primary" isopaque="yes">
+							<value>1164</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1169</value>
+							</regnode>
+						</regnode>
+						<regnode name="secondary" isopaque="yes">
+							<value>1165</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1170</value>
+							</regnode>
+						</regnode>
+						<regnode name="tertiary" isopaque="yes">
+							<value>1166</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1171</value>
+							</regnode>
+						</regnode>
+					</regnode>
 					<regnode name="Capacitor" status="undefined">
 						<value></value>
 						<regnode name="leads" isopaque="yes">
@@ -419,6 +488,18 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 							<value>1146</value>
 							<regnode name="Layout" isopaque="yes">
 								<value>1147</value>
+							</regnode>
+						</regnode>
+						<regnode name="primary" isopaque="yes">
+							<value>1172</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1174</value>
+							</regnode>
+						</regnode>
+						<regnode name="secondary" isopaque="yes">
+							<value>1173</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1175</value>
 							</regnode>
 						</regnode>
 					</regnode>
@@ -464,6 +545,24 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 							<value>yes</value>
 						</regnode>
 					</regnode>
+					<regnode name="BFET:primary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+					<regnode name="BFET:secondary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+					<regnode name="BFET:tertiary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
 					<regnode name="Capacitor:leads" status="undefined">
 						<value></value>
 						<regnode name="Layout" isopaque="yes">
@@ -477,6 +576,18 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 						</regnode>
 					</regnode>
 					<regnode name="Diode:leads" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+					<regnode name="Diode:primary" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+					<regnode name="Diode:secondary" status="undefined">
 						<value></value>
 						<regnode name="Layout" isopaque="yes">
 							<value>yes</value>
@@ -795,6 +906,39 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<regnode name="PrimaryAspects" status="undefined">
 					<value></value>
 					<regnode name="Assembly:Assembly" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value>yes</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</regnode>
+			<regnode name="BFET-4d-Model" status="undefined">
+				<value></value>
+				<regnode name="KindAspects" status="undefined">
+					<value></value>
+					<regnode name="Assembly:BFET" status="undefined">
+						<value></value>
+						<regnode name="Layout" isopaque="yes">
+							<value> </value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="MetaRef" isopaque="yes">
+					<value>1162</value>
+					<regnode name="Assembly" status="undefined">
+						<value></value>
+						<regnode name="BFET" isopaque="yes">
+							<value>1160</value>
+							<regnode name="Layout" isopaque="yes">
+								<value>1161</value>
+							</regnode>
+						</regnode>
+					</regnode>
+				</regnode>
+				<regnode name="PrimaryAspects" status="undefined">
+					<value></value>
+					<regnode name="Assembly:BFET" status="undefined">
 						<value></value>
 						<regnode name="Layout" isopaque="yes">
 							<value>yes</value>
@@ -1160,7 +1304,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</regnode>
 			</regnode>
 		</regnode>
-		<model id="id-0065-00000001" kind="ParadigmSheet" guid="{2fcc9467-441f-4e01-85c4-45f91e836a55}" relid="0x1" childrelidcntr="0x46">
+		<model id="id-0065-00000001" kind="ParadigmSheet" guid="{2fcc9467-441f-4e01-85c4-45f91e836a55}" relid="0x1" childrelidcntr="0x4f">
 			<name>PassiveElement</name>
 			<atom id="id-0066-00000001" kind="Model" role="Model" guid="{a7a03152-9ac1-4690-9c1c-e1014b380003}" relid="0x8">
 				<name>Resistor</name>
@@ -2272,6 +2416,198 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
+			<atom id="id-0066-0000002b" kind="Inheritance" role="Inheritance" guid="{252f013a-4618-457e-80a1-34e469649b82}" relid="0x48">
+				<name>Inheritance</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>353,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>353,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>290,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>353,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>353,152</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</atom>
+			<atom id="id-0066-0000002c" kind="Inheritance" role="Inheritance" guid="{c00db246-85b7-4dd2-b411-377149cf5344}" relid="0x4c">
+				<name>Inheritance</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>472,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>472,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>472,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>472,152</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>472,152</value>
+						</regnode>
+					</regnode>
+				</regnode>
+			</atom>
+			<atom id="id-0066-0000002d" kind="Model" role="Model" guid="{4b391703-db4d-4e78-8529-08167ffed2b8}" relid="0x4d">
+				<name>BFET</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>396,245</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>396,245</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>396,245</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>396,245</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>396,245</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon">
+					<value>bfet.png</value>
+				</attribute>
+				<attribute kind="InRootFolder" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsModelAutoRouted" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeInfoShown" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</atom>
 			<reference id="id-0067-00000005" kind="ModelProxy" role="ModelProxy" guid="{ed6f27e7-c838-413c-940e-ba8304ed09bf}" relid="0x2a" referred="id-0066-00000014">
 				<name>ResistanceDiffusionModelProxy</name>
 				<regnode name="PartRegs" status="undefined">
@@ -2512,6 +2848,246 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</reference>
+			<reference id="id-0067-0000000e" kind="ModelProxy" role="ModelProxy" guid="{4f32ef0c-2c52-494f-ba8a-534a43743bcf}" relid="0x47" referred="id-0066-00000029">
+				<name>BiTermElementProxy</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>310,56</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>310,56</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>247,49</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>310,56</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>310,56</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InRootFolder" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsModelAutoRouted" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeInfoShown" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</reference>
+			<reference id="id-0067-0000000f" kind="ModelProxy" role="ModelProxy" guid="{78abfe77-5be4-441c-b4ce-8542c63b5b6c}" relid="0x4b" referred="id-0066-0000002a">
+				<name>TriTermElementProxy</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>436,49</value>
+						</regnode>
+					</regnode>
+					<regnode name="Attributes" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>436,49</value>
+						</regnode>
+					</regnode>
+					<regnode name="ClassDiagram" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>436,49</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>436,49</value>
+						</regnode>
+					</regnode>
+					<regnode name="Visualization" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>436,49</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AutoRouterPref" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Decorator" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="DisplayedName" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GeneralPreferences" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="GradientFillDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="HelpURL" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="Icon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="InRootFolder" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="InstanceIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="IsAbstract" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsGradientFillEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsHotspotEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsModelAutoRouted" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsNameEnabled" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsResizable" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsRoundRectangleEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsShadowCastEnabled" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="IsTypeInfoShown" status="meta">
+					<value>true</value>
+				</attribute>
+				<attribute kind="IsTypeShown" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NamePosition" status="meta">
+					<value>4</value>
+				</attribute>
+				<attribute kind="NameWrapNum" status="meta">
+					<value>0</value>
+				</attribute>
+				<attribute kind="PortIcon" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="RoundRectangleRadius" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowColor" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowDirection" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ShadowThickness" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="SubTypeIcon" status="meta">
+					<value></value>
+				</attribute>
+			</reference>
 			<connection id="id-0068-00000001" kind="DerivedInheritance" role="DerivedInheritance" guid="{433257be-8794-4458-b282-71828375c5e2}" relid="0x14">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
@@ -2537,14 +3113,6 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value>wS</value>
 				</regnode>
 				<connpoint role="dst" target="id-0066-00000003"/>
-				<connpoint role="src" target="id-0066-00000005"/>
-			</connection>
-			<connection id="id-0068-00000004" kind="DerivedInheritance" role="DerivedInheritance" guid="{9838cebb-d85b-4c75-8fba-ca7efba861b0}" relid="0x17">
-				<name>DerivedInheritance</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>wS</value>
-				</regnode>
-				<connpoint role="dst" target="id-0066-00000004"/>
 				<connpoint role="src" target="id-0066-00000005"/>
 			</connection>
 			<connection id="id-0068-00000005" kind="HasAttribute" role="HasAttribute" guid="{0553f6ad-844e-4224-a0fe-c2824f57045e}" relid="0x1b">
@@ -2662,6 +3230,26 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</attribute>
 				<connpoint role="dst" target="id-0066-00000001"/>
 				<connpoint role="src" target="id-0066-0000000f"/>
+			</connection>
+			<connection id="id-0068-00000037" kind="BaseInheritance" role="BaseInheritance" guid="{30517619-8460-4dfa-933c-f87824e8ce49}" relid="0x49">
+				<name>BaseInheritance</name>
+				<connpoint role="dst" target="id-0066-0000002b"/>
+				<connpoint role="src" target="id-0067-0000000e"/>
+			</connection>
+			<connection id="id-0068-00000038" kind="DerivedInheritance" role="DerivedInheritance" guid="{a10a6218-5430-4a5b-aed6-160e9d414156}" relid="0x4a">
+				<name>DerivedInheritance</name>
+				<connpoint role="dst" target="id-0066-00000004"/>
+				<connpoint role="src" target="id-0066-0000002b"/>
+			</connection>
+			<connection id="id-0068-00000039" kind="BaseInheritance" role="BaseInheritance" guid="{1bbfc18e-f5b9-419e-8f15-1ab6fcf92ce3}" relid="0x4e">
+				<name>BaseInheritance</name>
+				<connpoint role="dst" target="id-0066-0000002c"/>
+				<connpoint role="src" target="id-0067-0000000f"/>
+			</connection>
+			<connection id="id-0068-0000003a" kind="DerivedInheritance" role="DerivedInheritance" guid="{03877d56-3911-4688-8d6a-f856f144ff9d}" relid="0x4f">
+				<name>DerivedInheritance</name>
+				<connpoint role="src" target="id-0066-0000002c"/>
+				<connpoint role="dst" target="id-0066-0000002d"/>
 			</connection>
 		</model>
 		<model id="id-0065-00000002" kind="ParadigmSheet" guid="{4f6768cb-23d5-408e-a101-341a8601da5e}" relid="0x2" childrelidcntr="0xf">
@@ -5593,7 +6181,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</regnode>
 			</atom>
 			<atom id="id-0066-00000024" kind="Model" role="Model" guid="{5893bf15-9d61-4e58-8f3e-a979e9e68fd4}" relid="0x4">
-				<name>UBiTermElement</name>
+				<name>TwoTermElement</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
@@ -5611,7 +6199,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>177,238</value>
+							<value>176,168</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -6109,7 +6697,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</regnode>
 			</atom>
 			<atom id="id-0066-00000029" kind="Model" role="Model" guid="{efc25a2c-9d3e-477b-a4e1-a9ea5fd878a4}" relid="0xf">
-				<name>OBiTermElement</name>
+				<name>BiTermElement</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
@@ -6127,7 +6715,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>177,154</value>
+							<value>175,245</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -6247,7 +6835,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>180,322</value>
+							<value>173,322</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
