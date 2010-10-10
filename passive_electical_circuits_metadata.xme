@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{656A90A5-1974-41EB-B0CB-4234746575E1}" cdate="Sat Oct 09 16:06:54 2010" mdate="Sat Oct 09 16:06:54 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
+<project guid="{C30F670F-DA10-4FAC-A2FB-62A55BCC4CEA}" cdate="Sat Oct 09 16:06:54 2010" mdate="Sat Oct 09 16:06:54 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
 	<name>passive_electrical_circuit_metamodel</name>
 	<comment>First mini-project for CS-388, Model-Integrated-Computing
 The intended audience for this DSML are operators of the ngspice electronic simulator.</comment>
@@ -3161,7 +3161,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>157,145</value>
+							<value>115,131</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -3173,7 +3173,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>186,117</value>
+							<value>101,145</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -3197,7 +3197,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>32,231</value>
+							<value>149,189</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -3209,7 +3209,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>50,274</value>
+							<value>142,224</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -3317,7 +3317,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>32,371</value>
+							<value>149,287</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -3329,7 +3329,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>50,177</value>
+							<value>142,301</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -3431,13 +3431,13 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</attribute>
 			</atom>
 			<reference id="id-0067-00000009" kind="ModelProxy" role="ModelProxy" guid="{337fa1e9-36ee-4db6-8a98-c658347c37f7}" relid="0xe" referred="id-0066-00000027">
-				<name>ModelProxy</name>
+				<name>TwoTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>205,14</value>
+							<value>55,35</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -3449,7 +3449,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>289,35</value>
+							<value>44,28</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -3553,7 +3553,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 			<connection id="id-0068-00000015" kind="DerivedInheritance" role="DerivedInheritance" guid="{bdf9f5e4-4575-455b-9fe9-d84973b58840}" relid="0x7">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
-					<value>Se</value>
+					<value></value>
 				</regnode>
 				<connpoint role="src" target="id-0066-00000014"/>
 				<connpoint role="dst" target="id-0066-00000015"/>
@@ -3561,7 +3561,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 			<connection id="id-0068-00000016" kind="DerivedInheritance" role="DerivedInheritance" guid="{bd1a13df-43da-42b6-801c-aad17d69955b}" relid="0x8">
 				<name>DerivedInheritance</name>
 				<regnode name="autorouterPref" isopaque="yes">
-					<value>Se</value>
+					<value></value>
 				</regnode>
 				<connpoint role="src" target="id-0066-00000014"/>
 				<connpoint role="dst" target="id-0066-00000016"/>
@@ -6246,7 +6246,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>311,131</value>
+							<value>122,145</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6282,7 +6282,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>99,189</value>
+							<value>92,245</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6402,7 +6402,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>489,189</value>
+							<value>300,196</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6522,7 +6522,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>269,49</value>
+							<value>95,42</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6642,7 +6642,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>431,371</value>
+							<value>354,455</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6762,7 +6762,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>535,264</value>
+							<value>346,299</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6798,7 +6798,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>107,301</value>
+							<value>98,336</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -6918,7 +6918,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>254,357</value>
+							<value>96,427</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
