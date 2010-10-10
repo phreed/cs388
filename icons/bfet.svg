@@ -7,12 +7,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="34.064388"
-   height="27.296984"
+   width="17.002333"
+   height="23.898312"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="diode.svg">
+   sodipodi:docname="bfet.svg">
+  <title
+     id="title2987">bfet</title>
   <defs
      id="defs19" />
   <sodipodi:namedview
@@ -24,8 +26,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
      id="namedview17"
      showgrid="true"
      units="mm"
@@ -33,9 +35,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="8.0422852"
-     inkscape:cx="82.175493"
-     inkscape:cy="15.814823"
+     inkscape:zoom="11.373509"
+     inkscape:cx="46.075812"
+     inkscape:cy="13.756086"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -56,13 +58,13 @@
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title></dc:title>
+    <dc:title>bfet</dc:title>
   </cc:Work>
 </rdf:RDF>
 </metadata>
   <g
      id="g5"
-     transform="matrix(4.6189,0,0,4.479505,-9.5264813,-56.83372)"
+     transform="matrix(4.6189,0,0,4.479505,-9.5264812,-58.173655)"
      style="stroke:#fc6a0d;stroke-width:0.85734701;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">
     <title
        id="title7">Layer 1</title>
@@ -74,11 +76,11 @@
          style="stroke:#fc6a0d;stroke-width:0.85734701;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">
         <path
            stroke-miterlimit="4"
-           d="m 2.5150087,15.745166 1.0825088,0 m 5.4125441,0 -2.1650176,0 m 0,0 -3.2475265,-2.23239 0,4.464779 z m 0.6495053,1.116194 0,-2.232389"
+           d="m 2.5150087,15.745166 1.0825088,0 m 1.712509,-2.321651 -1.2990106,1.562673 m -0.2165018,-1.562673 0,4.464779 z m 1.5155124,4.464779 -1.2990106,-1.339433"
            id="path3440"
            inkscape:connector-curvature="0"
            style="fill:none;stroke:#fc6a0d;stroke-width:0.85734701;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           sodipodi:nodetypes="cccccccccc" />
+           sodipodi:nodetypes="ccccccccc" />
       </g>
     </g>
   </g>
