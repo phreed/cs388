@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{C30F670F-DA10-4FAC-A2FB-62A55BCC4CEA}" cdate="Sat Oct 09 16:06:54 2010" mdate="Sat Oct 09 16:06:54 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
+<project guid="{7ABE376B-7A7D-4CE2-BBA1-1435EB2B9657}" cdate="Sat Oct 09 16:06:54 2010" mdate="Sat Oct 09 16:06:54 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
 	<name>passive_electrical_circuit_metamodel</name>
 	<comment>First mini-project for CS-388, Model-Integrated-Computing
 The intended audience for this DSML are operators of the ngspice electronic simulator.</comment>
@@ -2249,7 +2249,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>449,392</value>
+							<value>400,392</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -2555,7 +2555,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>683,364</value>
+							<value>382,511</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -3430,8 +3430,8 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 			</atom>
-			<reference id="id-0067-00000009" kind="ModelProxy" role="ModelProxy" guid="{337fa1e9-36ee-4db6-8a98-c658347c37f7}" relid="0xe" referred="id-0066-00000027">
-				<name>TwoTermElementProxy</name>
+			<reference id="id-0067-00000009" kind="ModelProxy" role="ModelProxy" guid="{337fa1e9-36ee-4db6-8a98-c658347c37f7}" relid="0xe" referred="id-0066-0000002c">
+				<name>BiTermElementProxy</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="All" status="undefined">
@@ -3449,7 +3449,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="ClassDiagram" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>44,28</value>
+							<value>47,28</value>
 						</regnode>
 					</regnode>
 					<regnode name="Constraints" status="undefined">
@@ -4060,7 +4060,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				</attribute>
 			</set>
 		</model>
-		<model id="id-0065-00000004" kind="ParadigmSheet" guid="{a725ec9f-5ef2-4fe0-886f-247b5b806ae8}" relid="0x4" childrelidcntr="0x40">
+		<model id="id-0065-00000004" kind="ParadigmSheet" guid="{a725ec9f-5ef2-4fe0-886f-247b5b806ae8}" relid="0x4" childrelidcntr="0x44">
 			<name>Connectivity</name>
 			<atom id="id-0066-0000001d" kind="Connection" role="Connection" guid="{5a810f4d-3fe2-4250-8f7d-d4fbf2211d5b}" relid="0x26">
 				<name>Line</name>
@@ -4069,7 +4069,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>179,266</value>
+							<value>172,98</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -4294,7 +4294,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>458,467</value>
+							<value>430,376</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -4352,8 +4352,8 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="ChangeRelationEvent" status="meta">
 					<value>false</value>
 				</attribute>
-				<attribute kind="CloseEvent" status="meta">
-					<value>false</value>
+				<attribute kind="CloseEvent">
+					<value>true</value>
 				</attribute>
 				<attribute kind="ConnectEvent" status="meta">
 					<value>false</value>
@@ -4367,11 +4367,175 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<attribute kind="ConstraintParam" status="meta">
 					<value></value>
 				</attribute>
-				<attribute kind="ConstraintPriority" status="meta">
-					<value>2</value>
+				<attribute kind="ConstraintPriority">
+					<value>1</value>
 				</attribute>
 				<attribute kind="CreateEvent">
+					<value>false</value>
+				</attribute>
+				<attribute kind="DeleteEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="Depth" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="DeriveEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="DisconnectEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LostChildEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="MoveEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NewChildEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ReferenceEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="RemoveSetEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="UnReferenceEvent" status="meta">
+					<value>false</value>
+				</attribute>
+			</atom>
+			<atom id="id-0066-0000002f" kind="Constraint" role="Constraint" guid="{e1621d8b-070b-477d-83e8-609159ae5ae1}" relid="0x41">
+				<name>BiTermCardConstraint</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>356,370</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>97,447</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AddSetEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangeAttributeEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangePropertyEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangeRelationEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="CloseEvent">
 					<value>true</value>
+				</attribute>
+				<attribute kind="ConnectEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ConstraintDescription">
+					<value>Must have exactly 2 terminals</value>
+				</attribute>
+				<attribute kind="ConstraintEqn">
+					<value>self.parts(&quot;primary&quot;)-&gt;size() = 1
+and
+self.parts(&quot;secondary&quot;)-&gt;size() = 1</value>
+				</attribute>
+				<attribute kind="ConstraintParam" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ConstraintPriority">
+					<value>1</value>
+				</attribute>
+				<attribute kind="CreateEvent">
+					<value>false</value>
+				</attribute>
+				<attribute kind="DeleteEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="Depth" status="meta">
+					<value>1</value>
+				</attribute>
+				<attribute kind="DeriveEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="DisconnectEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="LostChildEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="MoveEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="NewChildEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ReferenceEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="RemoveSetEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="UnReferenceEvent" status="meta">
+					<value>false</value>
+				</attribute>
+			</atom>
+			<atom id="id-0066-00000030" kind="Constraint" role="Constraint" guid="{212c06f0-5acc-4801-94a3-c93f626e1cb3}" relid="0x43">
+				<name>TriTermCardConstraint</name>
+				<regnode name="PartRegs" status="undefined">
+					<value></value>
+					<regnode name="All" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>538,482</value>
+						</regnode>
+					</regnode>
+					<regnode name="Constraints" status="undefined">
+						<value></value>
+						<regnode name="Position" isopaque="yes">
+							<value>300,489</value>
+						</regnode>
+					</regnode>
+				</regnode>
+				<attribute kind="AddSetEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangeAttributeEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangePropertyEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ChangeRelationEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="CloseEvent">
+					<value>true</value>
+				</attribute>
+				<attribute kind="ConnectEvent" status="meta">
+					<value>false</value>
+				</attribute>
+				<attribute kind="ConstraintDescription">
+					<value>Must have exactly 2 terminals</value>
+				</attribute>
+				<attribute kind="ConstraintEqn">
+					<value>self.parts(&quot;tertiary&quot;)-&gt;size() = 1</value>
+				</attribute>
+				<attribute kind="ConstraintParam" status="meta">
+					<value></value>
+				</attribute>
+				<attribute kind="ConstraintPriority">
+					<value>1</value>
+				</attribute>
+				<attribute kind="CreateEvent">
+					<value>false</value>
 				</attribute>
 				<attribute kind="DeleteEvent" status="meta">
 					<value>false</value>
@@ -4657,7 +4821,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>183,406</value>
+							<value>170,203</value>
 						</regnode>
 					</regnode>
 					<regnode name="Attributes" status="undefined">
@@ -4777,7 +4941,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>356,378</value>
+							<value>300,280</value>
 						</regnode>
 						<regnode name="preferredSize" isopaque="yes">
 							<value>143,58</value>
@@ -4903,7 +5067,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<regnode name="All" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
-							<value>503,511</value>
+							<value>482,406</value>
 						</regnode>
 						<regnode name="preferredSize" isopaque="yes">
 							<value>143,58</value>
@@ -5154,385 +5318,15 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 				<connpoint role="src" target="id-0066-0000002e"/>
 				<connpoint role="dst" target="id-0067-0000000b"/>
 			</connection>
-		</model>
-		<model id="id-0065-00000005" kind="ParadigmSheet" guid="{7591e858-b255-4300-bbf7-297377b8f8ec}" relid="0x5" childrelidcntr="0x9">
-			<name>Location</name>
-			<atom id="id-0066-00000021" kind="Atom" role="Atom" guid="{cad1a883-4b8c-496d-9285-fa0b29a71af4}" relid="0x1">
-				<name>Position2D</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>206,238</value>
-						</regnode>
-					</regnode>
-					<regnode name="Attributes" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>308,133</value>
-						</regnode>
-					</regnode>
-					<regnode name="ClassDiagram" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>221,238</value>
-						</regnode>
-					</regnode>
-					<regnode name="Constraints" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>308,133</value>
-						</regnode>
-					</regnode>
-					<regnode name="Visualization" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>308,133</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="AutoRouterPref" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Decorator" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="DisplayedName" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GeneralPreferences" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GradientFillColor" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GradientFillDirection" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="HelpURL" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Icon" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="InRootFolder" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="InstanceIcon" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="IsAbstract" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsGradientFillEnabled" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsHotspotEnabled" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="IsNameEnabled" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="IsResizable" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsRoundRectangleEnabled" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsShadowCastEnabled" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsTypeShown" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="NamePosition" status="meta">
-					<value>4</value>
-				</attribute>
-				<attribute kind="NameWrapNum" status="meta">
-					<value>0</value>
-				</attribute>
-				<attribute kind="PortIcon" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="RoundRectangleRadius" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="ShadowColor" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="ShadowDirection" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="ShadowThickness" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="SubTypeIcon" status="meta">
-					<value></value>
-				</attribute>
-			</atom>
-			<atom id="id-0066-00000022" kind="Atom" role="Atom" guid="{4883e3f1-6be0-4737-9d58-91d3071641c4}" relid="0x2">
-				<name>Position</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>119,56</value>
-						</regnode>
-					</regnode>
-					<regnode name="Attributes" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>245,42</value>
-						</regnode>
-					</regnode>
-					<regnode name="ClassDiagram" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>224,28</value>
-						</regnode>
-					</regnode>
-					<regnode name="Constraints" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>245,42</value>
-						</regnode>
-					</regnode>
-					<regnode name="Visualization" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>245,42</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="AutoRouterPref" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Decorator" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="DisplayedName" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GeneralPreferences" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GradientFillColor" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GradientFillDirection" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="HelpURL" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Icon" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="InRootFolder" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="InstanceIcon" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="IsAbstract" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsGradientFillEnabled" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsHotspotEnabled" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="IsNameEnabled" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="IsResizable" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsRoundRectangleEnabled" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsShadowCastEnabled" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="IsTypeShown" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="NamePosition" status="meta">
-					<value>4</value>
-				</attribute>
-				<attribute kind="NameWrapNum" status="meta">
-					<value>0</value>
-				</attribute>
-				<attribute kind="PortIcon" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="RoundRectangleRadius" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="ShadowColor" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="ShadowDirection" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="ShadowThickness" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="SubTypeIcon" status="meta">
-					<value></value>
-				</attribute>
-			</atom>
-			<atom id="id-0066-00000023" kind="Inheritance" role="Inheritance" guid="{4de76b8f-4c3c-46c4-89c0-c57f09102106}" relid="0x3">
-				<name>Inheritance</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>143,152</value>
-						</regnode>
-					</regnode>
-					<regnode name="Attributes" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>248,152</value>
-						</regnode>
-					</regnode>
-					<regnode name="ClassDiagram" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>248,152</value>
-						</regnode>
-					</regnode>
-					<regnode name="Constraints" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>248,152</value>
-						</regnode>
-					</regnode>
-					<regnode name="Visualization" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>248,152</value>
-						</regnode>
-					</regnode>
-				</regnode>
-			</atom>
-			<atom id="id-0066-00000024" kind="FieldAttribute" role="FieldAttribute" guid="{dc288c15-f95d-40b7-aa8d-eca48292a1a7}" relid="0x6">
-				<name>y_ord</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>335,259</value>
-						</regnode>
-					</regnode>
-					<regnode name="Attributes" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>496,252</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="ContentType" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="DataType" status="meta">
-					<value>string</value>
-				</attribute>
-				<attribute kind="FieldDefault" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GlobalScope">
-					<value>false</value>
-				</attribute>
-				<attribute kind="Help" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="IsViewable" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="Multiline" status="meta">
-					<value>1</value>
-				</attribute>
-				<attribute kind="Prompt" status="meta">
-					<value></value>
-				</attribute>
-			</atom>
-			<atom id="id-0066-00000025" kind="FieldAttribute" role="FieldAttribute" guid="{e329d9bb-fbe9-4686-9e02-e5b8289f3278}" relid="0x7">
-				<name>x_ord</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="All" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>335,343</value>
-						</regnode>
-					</regnode>
-					<regnode name="Attributes" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>496,147</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="ContentType" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="DataType" status="meta">
-					<value>string</value>
-				</attribute>
-				<attribute kind="FieldDefault" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="GlobalScope">
-					<value>false</value>
-				</attribute>
-				<attribute kind="Help" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="IsViewable" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="Multiline" status="meta">
-					<value>1</value>
-				</attribute>
-				<attribute kind="Prompt" status="meta">
-					<value></value>
-				</attribute>
-			</atom>
-			<connection id="id-0068-0000002a" kind="BaseInheritance" role="BaseInheritance" guid="{9d8c2dbc-8856-478b-a0f5-b3fd53c8d053}" relid="0x4">
-				<name>BaseInheritance</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Sn</value>
-				</regnode>
-				<connpoint role="src" target="id-0066-00000022"/>
-				<connpoint role="dst" target="id-0066-00000023"/>
+			<connection id="id-0068-0000003e" kind="HasConstraint" role="HasConstraint" guid="{9b99c0e0-e22b-4c72-9c0d-e50f7ea7e88e}" relid="0x42">
+				<name>HasConstraint</name>
+				<connpoint role="src" target="id-0066-0000002f"/>
+				<connpoint role="dst" target="id-0067-0000000d"/>
 			</connection>
-			<connection id="id-0068-0000002b" kind="DerivedInheritance" role="DerivedInheritance" guid="{4300e955-bcae-4764-881b-38668a8e7045}" relid="0x5">
-				<name>DerivedInheritance</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>S</value>
-				</regnode>
-				<connpoint role="dst" target="id-0066-00000021"/>
-				<connpoint role="src" target="id-0066-00000023"/>
-			</connection>
-			<connection id="id-0068-0000002c" kind="HasAttribute" role="HasAttribute" guid="{e67c7a40-bc46-49f0-8615-4543820ef454}" relid="0x8">
-				<name>HasAttribute</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>W</value>
-				</regnode>
-				<connpoint role="dst" target="id-0066-00000021"/>
-				<connpoint role="src" target="id-0066-00000025"/>
-			</connection>
-			<connection id="id-0068-0000002d" kind="HasAttribute" role="HasAttribute" guid="{fef4a4e0-6029-4e89-9637-df2000ebf67c}" relid="0x9">
-				<name>HasAttribute</name>
-				<connpoint role="dst" target="id-0066-00000021"/>
-				<connpoint role="src" target="id-0066-00000024"/>
+			<connection id="id-0068-0000003f" kind="HasConstraint" role="HasConstraint" guid="{74902392-6f48-4125-80be-da9bba5fe0df}" relid="0x44">
+				<name>HasConstraint</name>
+				<connpoint role="src" target="id-0066-00000030"/>
+				<connpoint role="dst" target="id-0067-0000000e"/>
 			</connection>
 		</model>
 		<model id="id-0065-00000006" kind="ParadigmSheet" guid="{a347fbe2-edec-4d99-a47e-ea74e062895a}" relid="0x6" childrelidcntr="0xd">
@@ -6575,7 +6369,7 @@ The intended audience for this DSML are operators of the ngspice electronic simu
 					<value></value>
 				</attribute>
 				<attribute kind="InRootFolder">
-					<value>true</value>
+					<value>false</value>
 				</attribute>
 				<attribute kind="InstanceIcon" status="meta">
 					<value></value>
