@@ -1,6 +1,9 @@
-
 *.mga
 *.xmp
 *.log
 *.mta
 *~
+*.obj
+*.dll
+Debug/
+Release/
