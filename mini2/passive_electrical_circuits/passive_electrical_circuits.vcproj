@@ -260,6 +260,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\passive_electrical_circuit_metamodelBonX.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\StdAfx.cpp"
 				>
 				<FileConfiguration
@@ -350,6 +354,10 @@
 			</File>
 			<File
 				RelativePath="$(GME_ROOT)\SDK\BON\Common\MONImpl.h"
+				>
+			</File>
+			<File
+				RelativePath=".\passive_electrical_circuit_metamodelBonX.h"
 				>
 			</File>
 			<File

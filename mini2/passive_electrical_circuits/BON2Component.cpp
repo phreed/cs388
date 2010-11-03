@@ -22,6 +22,7 @@
 #include "stdafx.h"
 #include <Console.h>
 #include "BON2Component.h"
+#include "passive_electrical_circuit_metamodelBonX.h"
 
 namespace BON
 {
@@ -93,9 +94,33 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
 	using namespace GMEConsole;
 	Console::Out::WriteLine("Interpreter started...");
 	// ======================
-	// TODO: Insert application specific code here
+	
+	Folder rootFolder = project->getRootFolder();
 
+	set<Object> children = rootFolder->getChildObjects();
+	for(set<Object>::iterator child=children.begin(); 
+		child!= children.end(); ++child)
+	{		
+		ProcessObject(*child);
+	}
+
+    // ======================
 	Console::Out::WriteLine("Interpreter completed...");
+}
+
+/**
+ Below the root folder only 
+*/
+void Component::ProcessObject(Object object)
+{
+	Console::Out::WriteLine(object->getDoAction().c_str());
+	
+	set<Object> children = object->getChildObjects();
+	for(set<Object>::iterator child=children.begin(); 
+		child!= children.end(); ++child)
+	{		
+		ProcessModels(*child); 
+	}
 }
 
 // ====================================================
