@@ -1,0 +1,16 @@
+	PassiveElectricalCircuits
+		PhysicalModels
+			SimpleResistorModel
+		RLC circuits
+			VoltageSource
+				negative
+				positive
+			Simple Transistor
+				Resistor
+					Ref( DiffusionModelReference )
+					leads
+					leads
+				BFET
+					tertiary
+					secondary
+					primary

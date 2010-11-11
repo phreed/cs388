@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "mga.dtd">
+
+<project guid="{6B6D9BE6-EADD-4643-9E9E-C5D5B540CD53}" cdate="Thu Nov 11 04:44:38 2010" mdate="Thu Nov 11 04:44:38 2010" version="" metaguid="{9D3F9884-FE60-409C-8FC1-45789193989B}" metaversion="" metaname="MetaGME">
+	<name>MobileMiddleware</name>
+	<comment>This language is three languages which together form a framework
+upon which the developer crafts custom applications.
+
+Utility : Those functional elements seen by the user.  
+This is the typical visualization consisting of layout plans for sets of widgets.
+ 
+Information: Those data elements of interest in support of the functional units implied by Utility
+The binding between these data elements and layouts is explicit.
+The information elements are also logically grouped into records/relations.
+
+Transport: Those mechanisms necessary for transporting the Information from place to place according to policy.
+Also contains descriptions of those policies and the information necessary to satisfy them.
+
+The primary goals are:
+* Generate base code for the Content Providers
+* Generate base code for the Activies
+* Perform analysis to determine what percentage of updates will ikely reach their destination in 
+concrete network configurations under concrete policies.</comment>
+	<author></author>
+	<folder id="id-006a-00000001" relid="0x1" childrelidcntr="0x3" kind="RootFolder" guid="{5e2813ac-105f-4c46-b03b-1fc4418fd27c}">
+		<name>MobileMiddleware</name>
+		<folder id="id-006a-00000002" relid="0x1" childrelidcntr="0x0" kind="SheetFolder" guid="{860fe3f6-fcc2-4936-8301-09d547a0f817}">
+			<name>Utility</name>
+		</folder>
+		<folder id="id-006a-00000003" relid="0x2" childrelidcntr="0x0" kind="SheetFolder" guid="{d4d53ec3-59f6-4ad3-a0f6-804b14e93e83}">
+			<name>Information</name>
+		</folder>
+		<folder id="id-006a-00000004" relid="0x3" childrelidcntr="0x0" kind="SheetFolder" guid="{752df877-1681-44f7-a683-fe983219c028}">
+			<name>Transport</name>
+		</folder>
+	</folder>
+</project>
