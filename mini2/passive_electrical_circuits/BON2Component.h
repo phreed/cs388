@@ -64,9 +64,13 @@ class Component
 		void setParameter( const std::string& strName, const Util::Variant& varValue );
 
 	#ifdef GME_ADDON
+		
 		void globalEventPerformed( globalevent_enum event );
 		void objectEventPerformed( Object& object, unsigned long event, VARIANT v );
 	#endif
+
+    private:
+		void ProcessObject(std::ostream &ofs, BON::Object object, int level);
 };
 
 }; // namespace BON

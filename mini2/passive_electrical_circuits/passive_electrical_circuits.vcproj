@@ -48,7 +48,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".;$(GME_ROOT)/SDK/BON/Common"
+				AdditionalIncludeDirectories=".;&quot;$(GME_ROOT)/SDK/BON/Common&quot;;&quot;C:\Program Files (x86)\boost\boost_1_44&quot;"
 				PreprocessorDefinitions="_DEBUG;WIN32;_WINDOWS;_USRDLL;BUILDER_OBJECT_NETWORK_V2"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -71,7 +71,8 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				LinkIncremental="2"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;C:\Program Files (x86)\boost\boost_1_44\lib&quot;"
 				ModuleDefinitionFile="Component.def"
 				GenerateDebugInformation="true"
 				SubSystem="2"

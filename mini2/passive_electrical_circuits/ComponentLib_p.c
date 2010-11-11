@@ -4,9 +4,9 @@
 
 
  /* File created by MIDL compiler version 7.00.0500 */
-/* at Tue Nov 02 19:32:52 2010
+/* at Tue Nov 09 19:30:17 2010
  */
-/* Compiler settings for ..\..\..\..\..\..\..\Program Files (x86)\GME\SDK\BON\Common\ComponentLib.idl:
+/* Compiler settings for ..\..\..\..\..\..\Program Files (x86)\GME\SDK\BON\Common\ComponentLib.idl:
     Oicf, W1, Zp8, env=Win32 (32b run)
     protocol : dce , ms_ext, c_ext, robust
     error checks: stub_data 

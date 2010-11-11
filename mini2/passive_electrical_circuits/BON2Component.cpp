@@ -1,9 +1,9 @@
-//###############################################################################################################################################
+//#############################################
 //
 //	Meta and Builder Object Network V2.0 for GME
 //	BON2Component.cpp
 //
-//###############################################################################################################################################
+//#############################################
 
 /*
 	Copyright (c) Vanderbilt University, 2000-2004
@@ -21,17 +21,20 @@
 
 #include "stdafx.h"
 #include <Console.h>
+#include <iostream>
+#include <fstream>
+#include <boost/filesystem.hpp>
 #include "BON2Component.h"
 #include "passive_electrical_circuit_metamodelBonX.h"
 
 namespace BON
 {
 
-//###############################################################################################################################################
+//#############################################
 //
 // 	C L A S S : BON::Component
 //
-//###############################################################################################################################################
+//#############################################
 
 Component::Component()
 	: m_bIsInteractive( false )
@@ -92,37 +95,72 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
 	project->setAutoCommit( false);
 #endif
 	using namespace GMEConsole;
+	boost::filesystem2::path path = boost::filesystem::current_path();
 	Console::Out::WriteLine("Interpreter started...");
-	// ======================
 	
+	// ======================
+	std::ofstream ofs("passive_electrical_circuit_outline.txt",std::ios_base::out);
 	Folder rootFolder = project->getRootFolder();
-
-	set<Object> children = rootFolder->getChildObjects();
-	for(set<Object>::iterator child=children.begin(); 
-		child!= children.end(); ++child)
-	{		
-		ProcessObject(*child);
-	}
-
+	Component::ProcessObject(ofs, rootFolder, 0);
+    ofs.close();
     // ======================
-	Console::Out::WriteLine("Interpreter completed...");
+	GMEConsole::Console::Out::WriteLine("Interpreter completed...");
 }
+
 
 /**
- Below the root folder only 
+
 */
-void Component::ProcessObject(Object object)
+void Component::ProcessObject(std::ostream &ostr, const Object object, int level)
 {
-	Console::Out::WriteLine(object->getDoAction().c_str());
-	
-	set<Object> children = object->getChildObjects();
-	for(set<Object>::iterator child=children.begin(); 
-		child!= children.end(); ++child)
-	{		
-		ProcessModels(*child); 
+	++level;
+	std::string indent;
+	indent.append(level,'\t');
+	std::string name = object->getName();
+
+	MON::Object meta = object->getObjectMeta();
+	GMEConsole::Console::Out::WriteLine(meta.name().c_str());
+
+	if (BON::Model(object)) {
+		ostr << indent << name << std::endl;
+		Model model = Model(object);
+		std::set<FCO> children = model->getChildFCOs();
+		for(std::set<FCO>::iterator child=children.begin(); 
+			child!= children.end(); ++child)
+		{		
+			Component::ProcessObject(ostr, *child, level); 
+		}
+	} else if (BON::Atom(object)) {
+		ostr << indent << name << std::endl;
+	} else if (BON::Folder(object)) {
+		ostr << indent <<  name << std::endl;
+		Folder folder = Folder(object);
+		std::set<Object> children = folder->getChildObjects();
+		for(std::set<Object>::iterator child=children.begin(); 
+			child!= children.end(); ++child)
+		{		
+			Component::ProcessObject(ostr, *child, level); 
+		}
+	} else if (BON::Reference(object)) {
+		ostr << indent << "Ref( " << name << " )" << std::endl;
+	} else if (BON::Connection(object)) {
+		BON::Connection connection = BON::Connection(object);
+		std::multiset<BON::ConnectionEnd> ends = connection->getConnEnds();
+		ostr << indent <<  name << '(';
+		for (std::multiset<BON::ConnectionEnd>::iterator endItr = ends.begin(); endItr != ends.end(); ++endItr) {
+			Object* namedEnd((*endItr)->);
+			namedEnd->
+			if (endItr != ends.begin()) ostr << ", ";
+			ostr << (*endItr)->getInfoString();
+			//(*endItr)->getFCOHelper()->getObjectI()->get_Name();
+			
+			// ostr << namedEnd->getName();
+		}
+		ostr << ')' << std::endl;
+	} else {
+		ostr << indent <<  meta.name() << std::endl;
 	}
 }
-
 // ====================================================
 // GME currently does not use this function
 // You only need to implement it if other invokation mechanisms are used
