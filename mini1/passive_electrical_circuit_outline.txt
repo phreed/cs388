@@ -1,16 +1,66 @@
+CS388 Mini Project 2 : A Passive Electrical Circuit Outline
+Fred Eisele
+
 	PassiveElectricalCircuits
 		PhysicalModels
 			SimpleResistorModel
 		RLC circuits
-			VoltageSource
+			A4 : VoltageSource
 				negative
 				positive
-			Simple Transistor
-				Resistor
-					Ref( DiffusionModelReference )
-					leads
-					leads
+			A3 : Simple Transistor
+				R3
+					R3-model -> Ref( SimpleResistorModel )
+					R3-left
+					R3-right
 				BFET
 					tertiary
 					secondary
 					primary
+				Line(l2, secondary)
+				Line(l1, R3-right)
+				Line(l1, primary)
+				Line(R3-left, tertiary)
+				l2
+				l1
+			A2 : Series RLC
+				L2
+					L2-left
+					L2-right
+				R2
+					R2-model -> Ref( SimpleResistorModel )
+					R2-right
+					R2-left
+				Line(L2-right, C2-left)
+				Line(A2-right, L2-right)
+				Line(L2-left, C2-right)
+				Line(A2-left, L2-left)
+				Line(L2-right, R2-right)
+				Line(L2-left, R2-left)
+				A2-left
+				A2-right
+				C2
+					C2-left
+					C2-right
+			A1 : Parallel RLC
+				L1
+					L1-left
+					L1-right
+				R1
+					R1-model -> Ref( SimpleResistorModel )
+					R1-left
+					R1-right
+				Line(A2-right, R1-left)
+				Line(L1-left, R1-right)
+				Line(L1-right, C1-right)
+				Line(A1-left, C1-left)
+				A2-right
+				A1-left
+				C1
+					C1-right
+					C1-left
+			Line(l2, A2-right)
+			Line(positive, l1)
+			Line(A2-left, A2-right)
+			Line(A2-right, A1-left)
+			Line(negative, A1-left)

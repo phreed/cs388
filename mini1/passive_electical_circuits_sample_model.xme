@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{875E9610-7144-47D3-B0DC-9F1A979A630A}" cdate="Tue Nov 02 20:01:06 2010" mdate="Tue Nov 02 20:01:06 2010" version="" metaguid="{E5AE8D4C-C24A-4D87-91BF-9DE0CB793896}" metaversion="" metaname="passive_electrical_circuit_metamodel">
+<project guid="{E2D14306-291E-4093-BBBF-1019414C2257}" cdate="Tue Nov 02 20:01:06 2010" mdate="Tue Nov 02 20:01:06 2010" version="" metaguid="{E5AE8D4C-C24A-4D87-91BF-9DE0CB793896}" metaversion="" metaname="passive_electrical_circuit_metamodel">
 	<name>PassiveElectricalCircuits</name>
 	<comment></comment>
 	<author></author>
@@ -10,7 +10,7 @@
 		<model id="id-0065-00000001" kind="Assembly" guid="{9a780c9c-57ab-4250-ab98-e841de61346f}" relid="0x1" childrelidcntr="0xa">
 			<name>RLC circuits</name>
 			<model id="id-0065-00000002" kind="Assembly" role="Assembly" guid="{be80ca7c-cd96-4528-98d8-8a1f895646a7}" relid="0x1" childrelidcntr="0x13">
-				<name>Parallel RLC</name>
+				<name>A1 : Parallel RLC</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="Layout" status="undefined">
@@ -21,7 +21,7 @@
 					</regnode>
 				</regnode>
 				<model id="id-0065-00000003" kind="Capacitor" role="Capacitor" guid="{73c6b67c-b90e-4c7c-afba-82da0fbf6c63}" relid="0x1" childrelidcntr="0x2">
-					<name>Capacitor</name>
+					<name>C1</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -35,7 +35,7 @@
 						<value>0</value>
 					</attribute>
 					<model id="id-0065-00000004" kind="Terminal" role="leads" guid="{4786fea7-ee28-4b01-aa36-0b70fe0e0b4e}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>C1-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -47,7 +47,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-00000005" kind="Terminal" role="leads" guid="{ded63c81-fab4-4c7b-ac8f-628d674e49a0}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>C1-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -60,7 +60,7 @@
 					</model>
 				</model>
 				<model id="id-0065-00000006" kind="Inductor" role="Inductor" guid="{c12d9a85-89ac-4740-b2eb-f017b502eec8}" relid="0x2" childrelidcntr="0x2">
-					<name>Inductor</name>
+					<name>L1</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -74,7 +74,7 @@
 						<value>0</value>
 					</attribute>
 					<model id="id-0065-00000007" kind="Terminal" role="leads" guid="{64b00ed4-5a76-4218-b680-c57e68ea48b6}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>L1-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -86,7 +86,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-00000008" kind="Terminal" role="leads" guid="{77563e8c-e90e-4ebf-a9d5-a13ac6d03ff0}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>L1-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -99,7 +99,7 @@
 					</model>
 				</model>
 				<model id="id-0065-00000009" kind="Resistor" role="Resistor" guid="{6e156587-0d80-4222-92e8-c1471be17391}" relid="0x3" childrelidcntr="0x3">
-					<name>Resistor</name>
+					<name>R1</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -125,7 +125,7 @@
 						<value></value>
 					</attribute>
 					<model id="id-0065-0000000a" kind="Terminal" role="leads" guid="{30c8a18d-df33-4f73-89e1-85d5ba3a9e64}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>R1-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -137,7 +137,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-0000000b" kind="Terminal" role="leads" guid="{cf6bb289-c226-4ccd-967f-4a77a6bdb09c}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>R1-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -149,7 +149,7 @@
 						</regnode>
 					</model>
 					<reference id="id-0067-00000001" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{efd3fbcb-edef-48ed-9939-90ff9e8a8f20}" relid="0x3" referred="id-0065-0000002a">
-						<name>DiffusionModelReference</name>
+						<name>R1-model</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -162,7 +162,7 @@
 					</reference>
 				</model>
 				<model id="id-0065-0000000c" kind="Terminal" role="leads" guid="{c8ec866f-889c-4318-b6b0-6d5a789b99b5}" relid="0x5" childrelidcntr="0x0">
-					<name>leads</name>
+					<name>A1-left</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -174,7 +174,7 @@
 					</regnode>
 				</model>
 				<model id="id-0065-0000000d" kind="Terminal" role="leads" guid="{53101621-bc4a-4d81-b30b-6c2261aa2dac}" relid="0x6" childrelidcntr="0x0">
-					<name>leads</name>
+					<name>A2-right</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -207,7 +207,7 @@
 				</connection>
 			</model>
 			<model id="id-0065-0000000e" kind="VoltageSource" role="VoltageSource" guid="{f052e379-21b3-489a-8ae0-4348fb6232f5}" relid="0x2" childrelidcntr="0x2">
-				<name>VoltageSource</name>
+				<name>A4 : VoltageSource</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="Layout" status="undefined">
@@ -243,7 +243,7 @@
 				</model>
 			</model>
 			<model id="id-0065-00000011" kind="Assembly" role="Assembly" guid="{45020de9-e2c2-4ca2-adf4-b6edcd28ef6e}" relid="0x5" childrelidcntr="0xf">
-				<name>Series RLC</name>
+				<name>A2 : Series RLC</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="Layout" status="undefined">
@@ -254,7 +254,7 @@
 					</regnode>
 				</regnode>
 				<model id="id-0065-00000012" kind="Resistor" role="Resistor" guid="{47f5bd6b-192f-4590-9639-40397d01ee15}" relid="0x3" childrelidcntr="0x3">
-					<name>Resistor</name>
+					<name>R2</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -280,7 +280,7 @@
 						<value>7</value>
 					</attribute>
 					<model id="id-0065-00000013" kind="Terminal" role="leads" guid="{54371516-2070-4cfe-9c1f-5200c3d9eedd}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>R2-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -292,7 +292,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-00000014" kind="Terminal" role="leads" guid="{2b052bac-8cb0-48d6-9736-78d551e95aa8}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>R2-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -304,7 +304,7 @@
 						</regnode>
 					</model>
 					<reference id="id-0067-00000002" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{3e56b0d5-68b8-49df-8add-68d41331bd2b}" relid="0x3" referred="id-0065-0000002a">
-						<name>DiffusionModelReference</name>
+						<name>R2-model</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -317,7 +317,7 @@
 					</reference>
 				</model>
 				<model id="id-0065-00000015" kind="Inductor" role="Inductor" guid="{c893cc5b-e5d4-4e71-a0a1-090adec90b17}" relid="0x2" childrelidcntr="0x2">
-					<name>Inductor</name>
+					<name>L2</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -331,7 +331,7 @@
 						<value>0</value>
 					</attribute>
 					<model id="id-0065-00000016" kind="Terminal" role="leads" guid="{b38f9fa0-a2bc-402b-ad6b-eeb00d6965b7}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>L2-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -343,7 +343,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-00000017" kind="Terminal" role="leads" guid="{4e5ca2b5-5cd1-482b-9b54-1699ddfea790}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>L2-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -356,7 +356,7 @@
 					</model>
 				</model>
 				<model id="id-0065-00000018" kind="Capacitor" role="Capacitor" guid="{451175cf-6c21-43b7-a5ff-72a22bfd80c1}" relid="0x1" childrelidcntr="0x2">
-					<name>Capacitor</name>
+					<name>C2</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -370,7 +370,7 @@
 						<value>0</value>
 					</attribute>
 					<model id="id-0065-00000019" kind="Terminal" role="leads" guid="{04a9ca96-32ae-44f8-8e01-32f3fd575ff9}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>C2-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -382,7 +382,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-0000001a" kind="Terminal" role="leads" guid="{51bfdc64-4f94-4955-97fd-056c010845ce}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>C2-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -395,7 +395,7 @@
 					</model>
 				</model>
 				<model id="id-0065-0000001b" kind="Terminal" role="leads" guid="{7f68603a-0b3f-42fe-a371-3059e4b12356}" relid="0x5" childrelidcntr="0x0">
-					<name>leads</name>
+					<name>A2-right</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -407,7 +407,7 @@
 					</regnode>
 				</model>
 				<model id="id-0065-0000001c" kind="Terminal" role="leads" guid="{91ac810a-5182-479b-bc88-6d39aae6545f}" relid="0x6" childrelidcntr="0x0">
-					<name>leads</name>
+					<name>A2-left</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -453,7 +453,7 @@
 				</connection>
 			</model>
 			<model id="id-0065-0000001d" kind="Assembly" role="Assembly" guid="{aba0cbe4-5519-4703-bf59-a9965933f090}" relid="0x8" childrelidcntr="0x8">
-				<name>Simple Transistor</name>
+				<name>A3 : Simple Transistor</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="Layout" status="undefined">
@@ -512,7 +512,7 @@
 					</model>
 				</model>
 				<model id="id-0065-00000022" kind="Resistor" role="Resistor" guid="{b66dce4c-6dee-4247-969f-566e74721f3c}" relid="0x2" childrelidcntr="0x3">
-					<name>Resistor</name>
+					<name>R3</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -538,7 +538,7 @@
 						<value></value>
 					</attribute>
 					<model id="id-0065-00000023" kind="Terminal" role="leads" guid="{40f2727f-9625-440c-b463-4b298a25cc02}" relid="0x1" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>R3-right</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -550,7 +550,7 @@
 						</regnode>
 					</model>
 					<model id="id-0065-00000024" kind="Terminal" role="leads" guid="{c8db37da-269d-4621-ac86-f37efbd97419}" relid="0x2" childrelidcntr="0x0">
-						<name>leads</name>
+						<name>R3-left</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">
@@ -562,7 +562,7 @@
 						</regnode>
 					</model>
 					<reference id="id-0067-00000003" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{1739bc3c-a0fb-4241-b8cf-b6a7e1cc9815}" relid="0x3" referred="id-0065-0000002a">
-						<name>DiffusionModelReference</name>
+						<name>R3-model</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
 							<regnode name="Layout" status="undefined">

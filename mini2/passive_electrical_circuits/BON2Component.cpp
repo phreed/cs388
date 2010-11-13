@@ -100,6 +100,10 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
 	
 	// ======================
 	std::ofstream ofs("passive_electrical_circuit_outline.txt",std::ios_base::out);
+	ofs << "CS388 Mini Project 2 : A Passive Electrical Circuit Outline" << '\n'
+		<< "Fred Eisele" << '\n' 
+		<< std::endl;
+
 	Folder rootFolder = project->getRootFolder();
 	Component::ProcessObject(ofs, rootFolder, 0);
     ofs.close();
@@ -109,7 +113,9 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
 
 
 /**
-
+ * Write the children in order, use depth first search
+ * References should display the name of what they point to an not the name of the reference.
+ * Connections should name the objects which are connected.
 */
 void Component::ProcessObject(std::ostream &ostr, const Object object, int level)
 {
@@ -142,19 +148,17 @@ void Component::ProcessObject(std::ostream &ostr, const Object object, int level
 			Component::ProcessObject(ostr, *child, level); 
 		}
 	} else if (BON::Reference(object)) {
-		ostr << indent << "Ref( " << name << " )" << std::endl;
+		Reference reference = Reference(object);
+		BON::FCO fco = reference->getReferred();
+		ostr << indent << name << " -> Ref( " << fco->getName() << " )" << std::endl;
 	} else if (BON::Connection(object)) {
 		BON::Connection connection = BON::Connection(object);
 		std::multiset<BON::ConnectionEnd> ends = connection->getConnEnds();
 		ostr << indent <<  name << '(';
 		for (std::multiset<BON::ConnectionEnd>::iterator endItr = ends.begin(); endItr != ends.end(); ++endItr) {
-			Object* namedEnd((*endItr)->);
-			namedEnd->
 			if (endItr != ends.begin()) ostr << ", ";
-			ostr << (*endItr)->getInfoString();
-			//(*endItr)->getFCOHelper()->getObjectI()->get_Name();
-			
-			// ostr << namedEnd->getName();
+			BON::FCO endpoint = FCO(*endItr);
+			ostr << endpoint->getName();
 		}
 		ostr << ')' << std::endl;
 	} else {
