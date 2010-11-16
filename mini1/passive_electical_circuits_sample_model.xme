@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{E2D14306-291E-4093-BBBF-1019414C2257}" cdate="Tue Nov 02 20:01:06 2010" mdate="Tue Nov 02 20:01:06 2010" version="" metaguid="{E5AE8D4C-C24A-4D87-91BF-9DE0CB793896}" metaversion="" metaname="passive_electrical_circuit_metamodel">
+<project guid="{E2D14306-291E-4093-BBBF-1019414C2257}" cdate="Mon Nov 15 19:33:15 2010" mdate="Mon Nov 15 19:33:15 2010" version="" metaguid="{E5AE8D4C-C24A-4D87-91BF-9DE0CB793896}" metaversion="" metaname="passive_electrical_circuit_metamodel">
 	<name>PassiveElectricalCircuits</name>
 	<comment></comment>
 	<author></author>
@@ -148,7 +148,7 @@
 							</regnode>
 						</regnode>
 					</model>
-					<reference id="id-0067-00000001" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{efd3fbcb-edef-48ed-9939-90ff9e8a8f20}" relid="0x3" referred="id-0065-0000002a">
+					<reference id="id-0067-00000001" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{efd3fbcb-edef-48ed-9939-90ff9e8a8f20}" relid="0x3" referred="id-0065-00000028">
 						<name>R1-model</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -303,7 +303,7 @@
 							</regnode>
 						</regnode>
 					</model>
-					<reference id="id-0067-00000002" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{3e56b0d5-68b8-49df-8add-68d41331bd2b}" relid="0x3" referred="id-0065-0000002a">
+					<reference id="id-0067-00000002" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{3e56b0d5-68b8-49df-8add-68d41331bd2b}" relid="0x3" referred="id-0065-00000028">
 						<name>R2-model</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -561,7 +561,7 @@
 							</regnode>
 						</regnode>
 					</model>
-					<reference id="id-0067-00000003" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{1739bc3c-a0fb-4241-b8cf-b6a7e1cc9815}" relid="0x3" referred="id-0065-0000002a">
+					<reference id="id-0067-00000003" kind="DiffusionModelReference" role="DiffusionModelReference" guid="{1739bc3c-a0fb-4241-b8cf-b6a7e1cc9815}" relid="0x3" referred="id-0065-00000028">
 						<name>R3-model</name>
 						<regnode name="PartRegs" status="undefined">
 							<value></value>
@@ -651,9 +651,9 @@
 				<connpoint role="src" target="id-0065-00000026"/>
 			</connection>
 		</model>
-		<model id="id-0065-00000029" kind="PhysicsModelList" guid="{cfb1de15-caed-46c5-86d7-ba989d288f3f}" relid="0x3" childrelidcntr="0x1">
+		<model id="id-0065-00000027" kind="PhysicsModelList" guid="{cfb1de15-caed-46c5-86d7-ba989d288f3f}" relid="0x3" childrelidcntr="0x1">
 			<name>PhysicalModels</name>
-			<model id="id-0065-0000002a" kind="ResistanceDiffusionModel" role="ResistanceDiffusionModel" guid="{8efbc311-f221-4ec3-a1b1-892e55d2ef4a}" relid="0x1" childrelidcntr="0x0">
+			<model id="id-0065-00000028" kind="ResistanceDiffusionModel" role="ResistanceDiffusionModel" guid="{8efbc311-f221-4ec3-a1b1-892e55d2ef4a}" relid="0x1" childrelidcntr="0x0">
 				<name>SimpleResistorModel</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
