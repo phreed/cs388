@@ -24,6 +24,7 @@
 #include <iostream>
 #include <fstream>
 #include <boost/filesystem.hpp>
+#include <boost/date_time/gregorian/gregorian.hpp>
 #include "BON2Component.h"
 #include "passive_electrical_circuit_metamodelBonX.h"
 
@@ -97,11 +98,13 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
 	using namespace GMEConsole;
 	boost::filesystem2::path path = boost::filesystem::current_path();
 	Console::Out::WriteLine("Interpreter started...");
-	
+	boost::gregorian::date today = boost::gregorian::day_clock::local_day();
+
 	// ======================
 	std::ofstream ofs("passive_electrical_circuit_outline.txt",std::ios_base::out);
 	ofs << "CS388 Mini Project 2 : A Passive Electrical Circuit Outline" << '\n'
 		<< "Fred Eisele" << '\n' 
+		<< today << '\n'
 		<< std::endl;
 
 	Folder rootFolder = project->getRootFolder();
