@@ -1,6 +1,7 @@
 *.mga
 *.xmp
 *.log
+*.bak
 *.mta
 *~
 *.obj
