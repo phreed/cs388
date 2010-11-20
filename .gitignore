@@ -5,7 +5,7 @@
 *.mta
 *~
 *.obj
-*.dll
 Debug/
 Release/
 *.ncb
+*.swp
