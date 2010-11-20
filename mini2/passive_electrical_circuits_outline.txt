@@ -1,45 +1,49 @@
 CS388 Mini Project 2 : A Passive Electrical Circuit Outline
 Fred Eisele
-2010-Nov-18
+2010-Nov-20
 
 	PassiveElectricalCircuits
 		RLC circuits
 			A3 : Simple Transistor
-				l2
-				l1
-				R3
-					R3-left
-					R3-right
-					R3-model -> Ref( SimpleResistorModel )
 				BFET
 					tertiary
 					secondary
 					primary
-				Line(l2, secondary)
-				Line(l1, R3-right)
-				Line(l1, primary)
-				Line(R3-left, tertiary)
+				Line(A3-right, secondary)
+				Line(A3-left, R3-right)
+				Line(A3-left, primary)
+				Line(tertiary, R3-left)
+				A3-right
+				A3-left
+				R3
+					R3-right
+					R3-left
+					R3-model -> Ref( SimpleResistorModel )
 			A2 : Series RLC
-				A2-left
-				A2-right
-				C2
-					C2-right
-					C2-left
-				L2
-					L2-left
-					L2-right
-				R2
-					R2-right
-					R2-left
-					R2-model -> Ref( SimpleResistorModel )
-				Line(A2-right, L2-right)
 				Line(C2-left, L2-right)
+				Line(A2-right, L2-right)
 				Line(C2-right, L2-left)
 				Line(A2-left, L2-left)
 				Line(L2-right, R2-right)
 				Line(L2-left, R2-left)
-			A1 : Parallel RLC
+				A2-left
 				A2-right
+				C2
+					C2-left
+					C2-right
+				L2
+					L2-right
+					L2-left
+				R2
+					R2-right
+					R2-left
+					R2-model -> Ref( SimpleResistorModel )
+			A1 : Parallel RLC
+				Line(A1-right, R1-left)
+				Line(R1-right, L1-left)
+				Line(L1-right, C1-right)
+				Line(A1-left, C1-left)
+				A1-right
 				A1-left
 				C1
 					C1-right
@@ -51,13 +55,9 @@ Fred Eisele
 					R1-left
 					R1-right
 					R1-model -> Ref( SimpleResistorModel )
-				Line(A2-right, R1-left)
-				Line(L1-left, R1-right)
-				Line(C1-right, L1-right)
-				Line(A1-left, C1-left)
-			Line(l2, A2-right)
-			Line(l1, positive)
-			Line(A2-left, A2-right)
+			Line(A3-right, A1-right)
+			Line(A3-left, positive)
+			Line(A2-left, A1-right)
 			Line(A2-right, A1-left)
 			Line(A1-left, negative)
 			A4 : VoltageSource
@@ -65,3 +65,4 @@ Fred Eisele
 				negative
 		PhysicalModels
 			SimpleResistorModel
+Total number of items in structure: 22

@@ -96,12 +96,14 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
 	project->setAutoCommit( false);
 #endif
 	using namespace GMEConsole;
-	boost::filesystem2::path path = boost::filesystem::current_path();
+	const std::string filename = "passive_electrical_circuits_outline.txt";
+	
 	Console::Out::WriteLine("Interpreter started...");
+	
 	boost::gregorian::date today = boost::gregorian::day_clock::local_day();
 
 	// ======================
-	std::ofstream ofs("passive_electrical_circuit_outline.txt",std::ios_base::out);
+	std::ofstream ofs(filename.c_str(),std::ios_base::out);
 	ofs << "CS388 Mini Project 2 : A Passive Electrical Circuit Outline" << '\n'
 		<< "Fred Eisele" << '\n' 
 		<< today << '\n'
@@ -113,6 +115,12 @@ void Component::invokeEx( Project& project, FCO& currentFCO, const std::set<FCO>
     ofs.close();
     // ======================
 	GMEConsole::Console::Out::WriteLine("Interpreter completed...");
+
+	boost::filesystem2::path path = boost::filesystem::current_path();
+
+	std::stringstream info;
+	info << "output file: " << path << "::" << filename << std::endl;
+	Console::Out::WriteLine(info.str().c_str());
 }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{E2D14306-291E-4093-BBBF-1019414C2257}" cdate="Mon Nov 15 19:33:15 2010" mdate="Mon Nov 15 19:33:15 2010" version="" metaguid="{E5AE8D4C-C24A-4D87-91BF-9DE0CB793896}" metaversion="" metaname="passive_electrical_circuit_metamodel">
+<project guid="{CF5624FB-5C53-4E81-84D0-1C6BD2F1E32A}" cdate="Sat Nov 20 07:35:11 2010" mdate="Sat Nov 20 07:35:11 2010" version="" metaguid="{6CB91CD2-60CB-4FD5-8D9E-CA611089DD74}" metaversion="" metaname="passive_electrical_circuit_metamodel">
 	<name>PassiveElectricalCircuits</name>
 	<comment></comment>
 	<author></author>
@@ -174,7 +174,7 @@
 					</regnode>
 				</model>
 				<model id="id-0065-0000000d" kind="Terminal" role="leads" guid="{53101621-bc4a-4d81-b30b-6c2261aa2dac}" relid="0x6" childrelidcntr="0x0">
-					<name>A2-right</name>
+					<name>A1-right</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
@@ -575,19 +575,19 @@
 					</reference>
 				</model>
 				<model id="id-0065-00000025" kind="Terminal" role="leads" guid="{04896afe-fa12-4573-8792-49a9dbe76b59}" relid="0x4" childrelidcntr="0x0">
-					<name>l1</name>
+					<name>A3-left</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
 							<value></value>
 							<regnode name="Position" isopaque="yes">
-								<value>84,210</value>
+								<value>28,189</value>
 							</regnode>
 						</regnode>
 					</regnode>
 				</model>
 				<model id="id-0065-00000026" kind="Terminal" role="leads" guid="{301f0bc3-9863-43e4-ad10-fb3c6537560f}" relid="0x5" childrelidcntr="0x0">
-					<name>l2</name>
+					<name>A3-right</name>
 					<regnode name="PartRegs" status="undefined">
 						<value></value>
 						<regnode name="Layout" status="undefined">
